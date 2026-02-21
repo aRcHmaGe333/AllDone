@@ -1,48 +1,49 @@
 # PrecisionDelivery
 
-**Subscription food delivery that eliminates waste, returns your free time, and costs less than groceries.**
+**Subscription delivery of everything — food, household goods, hygiene, medicine — in reusable packaging. Zero waste, lower cost, your free time returned.**
 
 ---
 
 ## The Problem
 
-Every week, millions of households burn hours on the same loop: drive to the store, navigate aisles, haul bags, unpack, cook, clean up. The fuel, the parking, the heavy lifting, the decision fatigue. Meanwhile, 30-40% of purchased food ends up in the bin because portions don't match actual consumption.
+Every week, millions of households burn hours on the same loop: drive to the store, navigate aisles, haul bags, unpack, cook, clean up. The fuel, the parking, the heavy lifting, the decision fatigue. Meanwhile, 30-40% of purchased food ends up in the bin, and every delivery arrives in cardboard that goes straight to recycling — or landfill.
 
-This isn't a convenience problem. It's a logistics failure. The infrastructure between food production and your kitchen is designed around bulk retail — a model that wastes your time, your money, your fuel, your food, and your spine.
+This isn't a convenience problem. It's a logistics failure. The infrastructure between production and your home is designed around bulk retail and disposable packaging — a model that wastes your time, your money, your fuel, your food, your materials, and your spine.
 
 ## The Solution
 
-PrecisionDelivery replaces the grocery run with **exact-portion, subscription-based food delivery to residential blocks**.
+PrecisionDelivery replaces the grocery run — and every other routine shopping trip — with **subscription-based delivery of food, household goods, hygiene products, medicine, and more, all in reusable packaging**.
 
 **How it works:**
 
-1. **Subscribe.** Select your household's food preferences, dietary needs, and portion style. The system learns your actual consumption patterns over time.
-2. **Receive.** Electric delivery vehicles bring pre-portioned meals and ingredients directly to your residential block on a scheduled cadence. No individual trips. No heavy bags. No forgotten items.
-3. **Return.** Reusable containers go back on the next delivery run. Cleaned, refilled, recirculated. No cardboard. No plastic wrap. No waste stream.
-4. **Adjust.** The system tracks what you actually use, what comes back untouched, and adapts. Portions converge on exactly what you need. Waste approaches zero.
+1. **Subscribe.** Select your household's needs — food preferences, portion sizes, household consumables, hygiene products, medications. The system learns your actual consumption patterns over time.
+2. **Receive.** Electric delivery vehicles bring everything to your residential block on a scheduled cadence. Pre-portioned food, household supplies, hygiene items — all in standardized, washable, durable containers designed to slot into existing fridge and shelf structures. No individual trips. No heavy bags. No forgotten items.
+3. **Return.** Containers go back on the next delivery run. Cleaned, refilled, recirculated. No cardboard. No plastic wrap. No waste stream. Every category of goods where disposable packaging can be replaced with a reusable container — is.
+4. **Adjust.** The system tracks what you actually use, what comes back untouched, and adapts. Quantities converge on exactly what you need. Waste approaches zero.
 
 ## What Subscribers Get
 
 | Benefit | How |
 |---|---|
-| **Lower cost than groceries** | Bulk purchasing power + zero waste + no retail markup + no fuel costs |
-| **10+ hours/week returned** | No shopping trips, reduced cooking/cleanup, no errand driving |
-| **Zero food waste** | Portions calibrated to actual consumption; uneaten food composted into soil enrichment |
+| **Lower cost than retail** | Bulk purchasing power + zero waste + no retail markup + no fuel costs |
+| **10+ hours/week returned** | No shopping trips, reduced errands, no driving for forgotten items |
+| **Zero waste** | Portions calibrated to consumption; reusable containers replace all disposable packaging |
 | **No heavy lifting** | Delivered to your block. Your spine thanks you |
-| **Fresh, not frozen** | Short supply chain, local production integration, daily or bi-daily cadence |
-| **Reusable everything** | Standardized containers replace disposable packaging entirely |
+| **Fresh, not frozen** | Short supply chain, local sourcing, daily or bi-daily cadence |
+| **Reusable everything** | Washable, durable, slottable containers for food, hygiene, household goods, medicine |
 
 ## Business Model
 
-**Revenue:** Monthly subscription per household. Tiered by household size and meal complexity.
+**Revenue:** Monthly subscription per household. Tiered by household size, product categories, and delivery frequency.
 
 **Unit economics:** Aggregated demand per residential block means each delivery run serves 20-100 households. Per-household delivery cost drops to a fraction of individual grocery trips. Reusable containers eliminate packaging costs after initial investment.
 
 **Customer segments:**
 - Residential blocks and housing cooperatives (primary)
 - Office buildings and coworking spaces
-- Municipal meal programs (elderly care, school lunches)
-- Food service operations seeking waste reduction
+- Municipal programs (elderly care, school meals, social services)
+- Healthcare facilities (medication, hygiene, meal delivery)
+- Any operation seeking to eliminate disposable packaging and delivery waste
 
 **Expansion model:** City-by-city. Each city operates as an independent node with local sourcing, local fleet, local depot. The system architecture is modular — adding a city means deploying a node, not scaling a monolith.
 
@@ -88,8 +89,9 @@ The system is delivery-mode neutral by design. The same demand data, the same po
 - Any combination per context
 
 ### Reusable Container System
-- Standardized sizes: 250ml, 500ml, 1L meal trays; 20-50L bulk bins
+- Standardized sizes: 250ml, 500ml, 1L meal trays; 20-50L bulk bins; category-specific containers for hygiene, medicine, household goods
 - Materials: PP for pilot phase, 316 stainless for scale, anodized aluminum where weight matters
+- Design requirements: washable, durable, slottable into standard fridge shelves and storage racks
 - Full lifecycle tracking: deploy → use → return → wash → refill
 - Zero single-use packaging from day one
 
@@ -122,9 +124,9 @@ The system is delivery-mode neutral by design. The same demand data, the same po
 
 ## Relationship to Autonomous Food System
 
-This project handles **distribution** — getting food from production to people. The production side (growing, cooking, livestock, recipe optimization) lives in [AutonomousFoodSystem](https://github.com/aRcHmaGe333/AutonomousFoodSystem). The two connect at the delivery interface: once food is prepared, it enters this network.
+This project handles **distribution** — getting goods from production to people in reusable packaging. The food production side (growing, cooking, livestock, recipe optimization) lives in [AutonomousFoodSystem](https://github.com/aRcHmaGe333/AutonomousFoodSystem). The two connect at the delivery interface: once food is produced, it enters this network alongside household goods, hygiene products, and other deliverables.
 
-PrecisionDelivery can operate independently of AutonomousFoodSystem. It works with any food source — local farms, commercial kitchens, cooperatives. The integration with autonomous production is the long-term convergence, not a dependency.
+PrecisionDelivery operates independently. It works with any supplier — local farms, commercial kitchens, cooperatives, household goods manufacturers, pharmacies. The integration with autonomous food production is the long-term convergence, not a dependency.
 
 ---
 
@@ -152,4 +154,4 @@ For collaboration, licensing, pilot partnerships, or investment inquiries: [GitH
 
 ---
 
-**The grocery store is a warehouse you drive to. PrecisionDelivery is the warehouse that drives to you — and eventually, the warehouse that falls to you, at the speed of gravity, using no energy at all.**
+**The store is a warehouse you drive to. PrecisionDelivery is the warehouse that drives to you — and eventually, the warehouse that falls to you, at the speed of gravity, using no energy at all.**
