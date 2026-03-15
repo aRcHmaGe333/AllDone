@@ -10,6 +10,10 @@ It closes `P3.1` at the planning level.
 
 This is not validated field data. It is an explicit planning model that can later be replaced with live pilot evidence.
 
+This document covers the operator loop at pilot scope.
+
+For the broader economic framing, see [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md). AllDone should be compared to the full incumbent stack it replaces, not just to the marginal cost of a courier drop.
+
 ## Base pilot assumptions
 
 From [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md):

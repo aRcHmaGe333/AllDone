@@ -30,6 +30,8 @@ In simple terms:
 
 The user benefit is convenience with less waste, not convenience with more packaging.
 
+The correct economic comparison is not "delivery versus delivery." It is "wasteful fragmented retail behavior versus a closed-loop replacement model." See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md).
+
 ## What AllDone gives buildings and dense residential environments
 
 - fewer fragmented shopping trips

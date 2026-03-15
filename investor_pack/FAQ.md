@@ -4,6 +4,8 @@
 
 No. The core system is packaging, return, washing, and recirculation, not just delivery.
 
+It should be compared to the full incumbent stack it replaces, not to the unit economics of a generic courier run.
+
 ## Why glass?
 
 Glass is the default because it is inert, easy to inspect, and aligned with repeated washing and long reuse life. The repo also documents fallback cases where non-glass elements may be justified.
@@ -32,3 +34,9 @@ The repo now contains both:
 ## What would the first raise fund?
 
 The first raise should fund proof of the loop, not premature scaling.
+
+## Why not compare AllDone to ordinary delivery apps?
+
+Because that is the wrong benchmark.
+
+AllDone is a replacement model for a recurring household supply system with reusable packaging, returns, wash, and recirculation. The right economic comparison is the full incumbent stack versus the full replacement stack.

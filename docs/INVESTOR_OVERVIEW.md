@@ -42,6 +42,8 @@ For operators and partners, AllDone provides:
 
 For investors, the relevant point is that AllDone is not trying to win on "faster delivery." It is trying to replace a repeated household chore with a reusable, recurring system.
 
+The economic frame should be system-level, not courier-level. See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md).
+
 ## Current repo status
 
 This repository is currently a concept, research, and prototype repo.
@@ -115,6 +117,8 @@ Capital should fund proof of the loop:
 
 The priority is proving repeatable operations and repeatable user value, not scaling brand spend before the loop is validated.
 
+That proof should be judged against the full incumbent cost stack AllDone replaces, not against the marginal economics of an ordinary last-mile drop.
+
 ## Immediate priorities
 
 1. Finalize the first pilot container set.
@@ -141,6 +145,7 @@ The wrong interpretation would be that the business is already launch-ready. The
 - [VALUE_PROPOSITION.md](VALUE_PROPOSITION.md)
 - [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md)
 - [PILOT_UNIT_ECONOMICS.md](PILOT_UNIT_ECONOMICS.md)
+- [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md)
 - [FUNDRAISING_READINESS.md](FUNDRAISING_READINESS.md)
 - [PROBLEM_AND_ALTERNATIVES.md](PROBLEM_AND_ALTERNATIVES.md)
 - [WHY_NOW_AND_UNFAIR_ADVANTAGE.md](WHY_NOW_AND_UNFAIR_ADVANTAGE.md)
