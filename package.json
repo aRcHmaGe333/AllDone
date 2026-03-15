@@ -1,0 +1,14 @@
+{
+  "name": "alldone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Concept and prototype repository for AllDone, a closed-loop home provisioning system built around reusable packaging.",
+  "main": "src/backend/index.js",
+  "scripts": {
+    "start": "node src/backend/index.js",
+    "smoke": "node -e \"require('./src/backend/models/ConsumptionProfile'); require('./src/backend/services/AllDoneDistributionService'); require('./src/backend/services/AllDoneOperationsService'); require('./src/backend/routes/distribution'); require('./src/backend/routes/operations'); console.log('smoke_ok')\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

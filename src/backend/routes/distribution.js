@@ -1,10 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const PrecisionDistributionService = require('../services/PrecisionDistributionService');
+const AllDoneDistributionService = require('../services/AllDoneDistributionService');
 const logger = require('../utils/logger');
 
-// Initialize distribution service
-const distributionService = new PrecisionDistributionService();
+// Initialize the prototype service used by the public demo API.
+const distributionService = new AllDoneDistributionService();
+
+function parsePositiveInteger(value, fallback) {
+  const parsed = Number.parseInt(value, 10);
+  if (Number.isNaN(parsed)) {
+    return fallback;
+  }
+
+  if (parsed <= 0) {
+    throw new Error('Value must be a positive integer');
+  }
+
+  return parsed;
+}
 
 // Initialize sample consumption profiles
 const initializeSampleProfiles = () => {
@@ -76,6 +89,22 @@ const initializeSampleProfiles = () => {
     logger.info(`Initialized consumption profile for ${userData.userId}`);
   });
 };
+
+// GET /api/distribution/profiles - List all consumption profiles
+router.get('/', (req, res) => {
+  res.json({
+    service: 'AllDone distribution prototype',
+    status: 'prototype',
+    endpoints: [
+      'GET /api/distribution/profiles',
+      'POST /api/distribution/profiles',
+      'POST /api/distribution/consumption',
+      'GET /api/distribution/schedule/:userId',
+      'GET /api/distribution/metrics',
+      'GET /api/distribution/dashboard'
+    ]
+  });
+});
 
 // GET /api/distribution/profiles - List all consumption profiles
 router.get('/profiles', (req, res) => {
@@ -190,9 +219,9 @@ router.post('/consumption', (req, res) => {
 router.get('/schedule/:userId', (req, res) => {
   try {
     const { userId } = req.params;
-    const { days = 7 } = req.query;
+    const days = parsePositiveInteger(req.query.days, 7);
 
-    const schedule = distributionService.generateDistributionSchedule(userId, parseInt(days));
+    const schedule = distributionService.generateDistributionSchedule(userId, days);
 
     logger.info(`Generated distribution schedule for user ${userId} (${days} days)`);
     res.json({
@@ -231,7 +260,7 @@ router.post('/containers/:containerId/return', (req, res) => {
 router.get('/predictions/:userId/:ingredient', (req, res) => {
   try {
     const { userId, ingredient } = req.params;
-    const { days = 7 } = req.query;
+    const days = parsePositiveInteger(req.query.days, 7);
 
     const profile = distributionService.getConsumptionProfile(userId);
     if (!profile) {
@@ -241,7 +270,7 @@ router.get('/predictions/:userId/:ingredient', (req, res) => {
       });
     }
 
-    const prediction = profile.predictDemand(ingredient, parseInt(days));
+    const prediction = profile.predictDemand(ingredient, days);
 
     res.json(prediction);
   } catch (error) {
@@ -299,9 +328,9 @@ router.get('/metrics', (req, res) => {
 router.get('/waste-reduction/:userId', (req, res) => {
   try {
     const { userId } = req.params;
-    const { days = 30 } = req.query;
+    const days = parsePositiveInteger(req.query.days, 30);
 
-    const schedule = distributionService.generateDistributionSchedule(userId, parseInt(days));
+    const schedule = distributionService.generateDistributionSchedule(userId, days);
     const wasteReduction = distributionService.estimateWasteReduction(userId, schedule);
 
     res.json({
@@ -405,7 +434,9 @@ router.get('/dashboard', (req, res) => {
   }
 });
 
-// Initialize sample data
-initializeSampleProfiles();
+// Optional sample data for local demos only.
+if (process.env.ALLDONE_SAMPLE_DATA === 'true') {
+  initializeSampleProfiles();
+}
 
 module.exports = router;

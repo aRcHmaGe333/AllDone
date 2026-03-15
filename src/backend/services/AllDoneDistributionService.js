@@ -1,13 +1,15 @@
 /**
- * Precision Distribution Service - Zero-waste distribution through consumption tracking
- * Connects growing system → consumption patterns → cooking system
- * Eliminates supermarkets through precise portion delivery
+ * AllDone distribution prototype service.
+ * Models demand learning, supply scheduling, and reusable-container flow.
+ * Represents prototype logic, not a full production operating stack.
  */
 
 const ConsumptionProfile = require('../models/ConsumptionProfile');
+const JsonFileStore = require('../utils/JsonFileStore');
 
-class PrecisionDistributionService {
+class AllDoneDistributionService {
   constructor() {
+    this.store = new JsonFileStore('distribution.json');
     this.consumptionProfiles = new Map();
     this.distributionSchedule = new Map();
     this.reusableContainers = new Map();
@@ -17,6 +19,7 @@ class PrecisionDistributionService {
       precisionAccuracy: 0,
       userSatisfaction: 0
     };
+    this.loadState();
   }
 
   /**
@@ -34,6 +37,8 @@ class PrecisionDistributionService {
     if (initialData.supermarketData) {
       this.importSupermarketData(userId, initialData.supermarketData);
     }
+
+    this.persistState();
     
     return profile;
   }
@@ -76,6 +81,7 @@ class PrecisionDistributionService {
     }
 
     profile.updatedAt = new Date();
+    this.persistState();
     return profile;
   }
 
@@ -125,6 +131,7 @@ class PrecisionDistributionService {
 
     // Update distribution schedule
     this.updateDistributionSchedule(userId);
+    this.persistState();
 
     return consumptionRecord;
   }
@@ -237,6 +244,7 @@ class PrecisionDistributionService {
 
     // Store schedule
     this.distributionSchedule.set(userId, schedule);
+    this.persistState();
 
     return schedule;
   }
@@ -324,6 +332,8 @@ class PrecisionDistributionService {
       timesReused: 0
     });
 
+    this.persistState();
+
     return containerId;
   }
 
@@ -352,6 +362,7 @@ class PrecisionDistributionService {
     }
 
     this.wasteReductionMetrics.containersReused += 1;
+    this.persistState();
     return container;
   }
 
@@ -512,6 +523,79 @@ class PrecisionDistributionService {
       ...data
     });
   }
+
+  loadState() {
+    const state = this.store.load(null);
+    if (!state) {
+      return;
+    }
+
+    this.consumptionProfiles = new Map(
+      (state.consumptionProfiles || []).map(item => [item.userId, ConsumptionProfile.fromJSON(item)])
+    );
+    this.distributionSchedule = new Map(
+      (state.distributionSchedule || []).map(item => [item.userId, this.reviveSchedule(item)])
+    );
+    this.reusableContainers = new Map(
+      (state.reusableContainers || []).map(item => [item.containerId, this.reviveRecord(item)])
+    );
+    this.wasteReductionMetrics = state.wasteReductionMetrics || this.wasteReductionMetrics;
+  }
+
+  persistState() {
+    this.store.save({
+      consumptionProfiles: Array.from(this.consumptionProfiles.values()).map(profile => profile.toJSON()),
+      distributionSchedule: Array.from(this.distributionSchedule.values()).map(schedule => this.serializeSchedule(schedule)),
+      reusableContainers: Array.from(this.reusableContainers.entries()).map(([containerId, container]) => ({
+        containerId,
+        ...container
+      })),
+      wasteReductionMetrics: this.wasteReductionMetrics
+    });
+  }
+
+  serializeSchedule(schedule) {
+    return {
+      ...schedule,
+      totalIngredients: Object.fromEntries(schedule.totalIngredients || []),
+      dailyDistributions: (schedule.dailyDistributions || []).map(distribution => ({
+        ...distribution,
+        ingredients: Object.fromEntries(distribution.ingredients || [])
+      }))
+    };
+  }
+
+  reviveSchedule(schedule) {
+    return {
+      ...this.reviveRecord(schedule),
+      totalIngredients: new Map(Object.entries(schedule.totalIngredients || {})),
+      dailyDistributions: (schedule.dailyDistributions || []).map(distribution => ({
+        ...this.reviveRecord(distribution),
+        ingredients: new Map(Object.entries(distribution.ingredients || {}))
+      }))
+    };
+  }
+
+  reviveRecord(record) {
+    if (Array.isArray(record)) {
+      return record.map(item => this.reviveRecord(item));
+    }
+
+    if (!record || typeof record !== 'object') {
+      return record;
+    }
+
+    const revived = {};
+    Object.entries(record).forEach(([key, value]) => {
+      if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(value)) {
+        revived[key] = new Date(value);
+      } else {
+        revived[key] = this.reviveRecord(value);
+      }
+    });
+
+    return revived;
+  }
 }
 
-module.exports = PrecisionDistributionService;
+module.exports = AllDoneDistributionService;

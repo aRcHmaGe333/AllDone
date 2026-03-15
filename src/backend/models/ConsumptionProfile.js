@@ -1,6 +1,6 @@
 /**
- * Consumption Profile Model - Tracks individual consumption patterns for precision distribution
- * Implements zero-waste distribution through consumption-based portion adjustment
+ * Consumption profile model for the AllDone prototype.
+ * Tracks household usage and supports quantity planning adjustments.
  */
 
 class ConsumptionProfile {
@@ -19,6 +19,7 @@ class ConsumptionProfile {
     
     // Portion tracking
     this.portionHistory = data.portionHistory || [];
+    this.adjustmentHistory = data.adjustmentHistory || [];
     this.currentPortions = data.currentPortions || new Map(); // ingredient -> current portion size
     this.wasteTracking = data.wasteTracking || new Map(); // ingredient -> waste percentage
     
@@ -251,7 +252,9 @@ class ConsumptionProfile {
       appliedAt: new Date(),
       userApproved
     };
-    
+
+    this.adjustmentHistory.push(adjustment);
+    this.efficiency.adjustmentFrequency = this.calculateAdjustmentFrequency();
     this.logEvent('portion_adjustment_applied', adjustment);
     this.updatedAt = new Date();
     
@@ -431,18 +434,20 @@ class ConsumptionProfile {
   }
 
   calculateAccuracyScore() {
-    // Compare predicted vs actual consumption over time
-    // This would be implemented with historical prediction data
-    return 0.85; // Placeholder
+    if (this.portionHistory.length === 0) {
+      return 0;
+    }
+
+    const wasteRate = this.efficiency.overallWasteRate || 0;
+    const stabilityPenalty = Math.min(this.calculateAdjustmentFrequency() / 10, 0.35);
+    const score = 1 - Math.min(wasteRate / 100, 0.8) - stabilityPenalty;
+
+    return Math.max(0, Math.min(1, Number(score.toFixed(3))));
   }
 
   calculateAdjustmentFrequency() {
-    // Calculate how often portions are adjusted
-    const adjustmentEvents = this.portionHistory.filter(record => 
-      record.type === 'portion_adjustment_applied'
-    );
     const totalDays = Math.max(1, (new Date() - this.createdAt) / (1000 * 60 * 60 * 24));
-    return adjustmentEvents.length / totalDays * 30; // Adjustments per month
+    return this.adjustmentHistory.length / totalDays * 30; // Adjustments per month
   }
 
   logEvent(eventType, data) {
@@ -450,17 +455,25 @@ class ConsumptionProfile {
   }
 
   toJSON() {
+    const serializeNestedMap = map => Object.fromEntries(
+      Array.from(map.entries()).map(([key, value]) => [
+        key,
+        value instanceof Map ? Object.fromEntries(value) : value
+      ])
+    );
+
     return {
       id: this.id,
       userId: this.userId,
       householdId: this.householdId,
       consumptionPatterns: {
         daily: Object.fromEntries(this.consumptionPatterns.daily),
-        weekly: Object.fromEntries(this.consumptionPatterns.weekly),
+        weekly: serializeNestedMap(this.consumptionPatterns.weekly),
         monthly: Object.fromEntries(this.consumptionPatterns.monthly),
-        seasonal: Object.fromEntries(this.consumptionPatterns.seasonal)
+        seasonal: serializeNestedMap(this.consumptionPatterns.seasonal)
       },
       portionHistory: this.portionHistory,
+      adjustmentHistory: this.adjustmentHistory,
       currentPortions: Object.fromEntries(this.currentPortions),
       wasteTracking: Object.fromEntries(this.wasteTracking),
       preferences: this.preferences,
@@ -482,9 +495,13 @@ class ConsumptionProfile {
     // Restore Map objects
     if (data.consumptionPatterns) {
       profile.consumptionPatterns.daily = new Map(Object.entries(data.consumptionPatterns.daily || {}));
-      profile.consumptionPatterns.weekly = new Map(Object.entries(data.consumptionPatterns.weekly || {}));
+      profile.consumptionPatterns.weekly = new Map(
+        Object.entries(data.consumptionPatterns.weekly || {}).map(([key, value]) => [key, new Map(Object.entries(value || {}))])
+      );
       profile.consumptionPatterns.monthly = new Map(Object.entries(data.consumptionPatterns.monthly || {}));
-      profile.consumptionPatterns.seasonal = new Map(Object.entries(data.consumptionPatterns.seasonal || {}));
+      profile.consumptionPatterns.seasonal = new Map(
+        Object.entries(data.consumptionPatterns.seasonal || {}).map(([key, value]) => [key, new Map(Object.entries(value || {}))])
+      );
     }
     
     if (data.currentPortions) {

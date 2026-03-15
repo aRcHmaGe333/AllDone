@@ -1,165 +1,175 @@
-# PrecisionDelivery
+# AllDone
 
-**Subscription delivery of everything — food, household goods, hygiene, medicine — in reusable packaging. Zero waste, lower cost, your free time returned.**
+**Closed-loop home provisioning built around reusable containers, return logistics, industrial washing, and recirculation.**
 
----
+AllDone is a concept and prototype project for replacing repetitive household shopping with a managed supply loop. Goods arrive in reusable containers, quantities adapt over time, and containers are collected, washed, refilled, and returned to circulation.
 
-## The Problem
-
-Every week, millions of households burn hours on the same loop: drive to the store, navigate aisles, haul bags, unpack, cook, clean up. The fuel, the parking, the heavy lifting, the decision fatigue. Meanwhile, 30-40% of purchased food ends up in the bin, and every delivery arrives in cardboard that goes straight to recycling — or landfill.
-
-This isn't a convenience problem. It's a logistics failure. The infrastructure between production and your home is designed around bulk retail and disposable packaging — a model that wastes your time, your money, your fuel, your food, your materials, and your spine.
-
-## The Solution
-
-PrecisionDelivery replaces the grocery run — and every other routine shopping trip — with **subscription-based delivery of food, household goods, hygiene products, medicine, and more, all in reusable packaging**.
-
-**How it works:**
-
-1. **Subscribe.** Select your household's needs — food preferences, portion sizes, household consumables, hygiene products, medications. The system learns your actual consumption patterns over time.
-2. **Receive.** Electric delivery vehicles bring everything to your residential block on a scheduled cadence. Pre-portioned food, household supplies, hygiene items — all in standardized, washable, durable containers designed to slot into existing fridge and shelf structures. No individual trips. No heavy bags. No forgotten items.
-3. **Return.** Containers go back on the next delivery run. Cleaned, refilled, recirculated. No cardboard. No plastic wrap. No waste stream. Every category of goods where disposable packaging can be replaced with a reusable container — is.
-4. **Adjust.** The system tracks what you actually use, what comes back untouched, and adapts. Quantities converge on exactly what you need. Waste approaches zero.
-
-## What Subscribers Get
-
-| Benefit | How |
-|---|---|
-| **Lower cost than retail** | Bulk purchasing power + zero waste + no retail markup + no fuel costs |
-| **10+ hours/week returned** | No shopping trips, reduced errands, no driving for forgotten items |
-| **Zero waste** | Portions calibrated to consumption; reusable containers replace all disposable packaging |
-| **No heavy lifting** | Delivered to your block. Your spine thanks you |
-| **Fresh, not frozen** | Short supply chain, local sourcing, daily or bi-daily cadence |
-| **Reusable everything** | Washable, durable, slottable containers for food, hygiene, household goods, medicine |
-
-## Business Model
-
-**Revenue:** Monthly subscription per household. Tiered by household size, product categories, and delivery frequency.
-
-**Unit economics:** Aggregated demand per residential block means each delivery run serves 20-100 households. Per-household delivery cost drops to a fraction of individual grocery trips. Reusable containers eliminate packaging costs after initial investment.
-
-**Customer segments:**
-- Residential blocks and housing cooperatives (primary)
-- Office buildings and coworking spaces
-- Municipal programs (elderly care, school meals, social services)
-- Healthcare facilities (medication, hygiene, meal delivery)
-- Any operation seeking to eliminate disposable packaging and delivery waste
-
-**Expansion model:** City-by-city. Each city operates as an independent node with local sourcing, local fleet, local depot. The system architecture is modular — adding a city means deploying a node, not scaling a monolith.
-
-## The Bigger Picture
-
-The electric vehicle fleet is Phase 1. It works today, with today's roads and today's regulations. It pays for itself through subscriber revenue.
-
-But the architecture is designed for what comes next.
-
-### Phase 2: Micro-Depots and Last-Mile Automation
-
-Neighborhood-level micro-depots where vehicles drop bulk loads. Last-meter delivery via conveyor, robot, or building-integrated systems. Vehicles never enter residential streets — they service depots, depots service blocks.
-
-### Phase 3: Gravity-Accelerated Tube Networks
-
-The endgame is infrastructure, not vehicles.
-
-Vertical tube corridors use gravity to drop cargo with regenerative braking — recovering energy on the way down. Counterbalanced lifts handle the upward journey at near-zero net energy cost. Tubes connect buildings through central shafts. Lateral dispatch uses kinetic relay systems — pendulum arms, elliptical relays — for motorless horizontal movement.
-
-No trucks. No fuel. No congestion. No emissions. No drivers. Energy-neutral delivery at the speed of gravity.
-
-This isn't speculative. Every component exists independently: pneumatic tube systems run in hospitals and banks worldwide, regenerative braking is standard in every EV, counterweight elevators are older than electricity. The innovation is assembling them into a unified urban logistics network.
-
-**The vehicle fleet generates the revenue and the data. The data proves the demand patterns. The demand patterns justify the infrastructure investment. The infrastructure replaces the vehicles.**
-
-Business first. Infrastructure second. Same destination.
+Reusable glass is the default planned consumer-facing container standard.
 
 ---
 
-## Technical Architecture
+## What AllDone is
 
-### Precision Distribution Engine
-- **Consumption profiling:** Per-household pattern tracking (daily, weekly, seasonal)
-- **Portion calibration:** Dynamic adjustment based on actual use vs. delivery
-- **Demand forecasting:** Block-level aggregation for route optimization
-- **Container tracking:** Reusable container lifecycle management (deploy, collect, clean, refill)
+AllDone is not just a delivery app.
 
-### Delivery Mode Abstraction
-The system is delivery-mode neutral by design. The same demand data, the same portion logic, the same container system works whether the last mile is:
-- Electric vehicle (Phase 1)
-- Micro-depot + robot (Phase 2)
-- Gravity tube (Phase 3)
-- Any combination per context
+It is a broader operating model:
 
-### Reusable Container System
-- Standardized sizes: 250ml, 500ml, 1L meal trays; 20-50L bulk bins; category-specific containers for hygiene, medicine, household goods
-- Materials: PP for pilot phase, 316 stainless for scale, anodized aluminum where weight matters
-- Design requirements: washable, durable, slottable into standard fridge shelves and storage racks
-- Full lifecycle tracking: deploy → use → return → wash → refill
-- Zero single-use packaging from day one
+**production -> packaging -> circulation -> home supply -> return -> reuse**
 
-### Vehicle Modularity
-- Interchangeable trailer modules (insulated, refrigerated, flatbed)
-- Quick-change ISO twist-lock interfaces
-- Modular internal racks aligned with container sizing and depot wash systems
-- Convoy capability for high-density routes
+The project is aimed at recurring household needs such as:
 
-### Waste Circularity
-- Returned food waste → composting → soil enrichment → local growing
-- Container wash water → greywater recycling
-- Delivery route optimization → minimal fuel/energy per household
-- Biomass reabsorption pathway: nothing is landfilled
+- groceries and prepared food
+- hygiene products
+- household consumables
+- other goods that fit a managed return-and-reuse loop
 
----
+## Why it matters
 
-## Documentation
+The current retail model wastes:
 
-| Document | Contents |
-|---|---|
-| [docs/packaging_guidance.md](docs/packaging_guidance.md) | Reusable container specs, material selection, lifecycle design |
-| [docs/vehicle_modularity.md](docs/vehicle_modularity.md) | Modular trailer systems, adaptive vehicle interiors |
-| [docs/manhours_savings.md](docs/manhours_savings.md) | Human time savings model, workforce transition planning |
-| [docs/delivery_decision_checklist.md](docs/delivery_decision_checklist.md) | Decision framework for delivery mode selection |
-| [docs/Integrated_gravity-based_urban_logistics.md](docs/Integrated_gravity-based_urban_logistics.md) | Full gravity tube network architecture |
-| [docs/NEW_BEARINGS_BOOK_FULL.md](docs/NEW_BEARINGS_BOOK_FULL.md) | Compiled reference: delivery, packaging, social impact |
+- consumer time
+- packaging
+- transport effort
+- food through mismatch and overbuying
+- labor through fragmented shopping and last-mile behavior
 
----
+AllDone is designed to remove that chore layer rather than slightly optimize the same disposable system.
 
-## Relationship to Autonomous Food System
+## Current repo status
 
-This project handles **distribution** — getting goods from production to people in reusable packaging. The food production side (growing, cooking, livestock, recipe optimization) lives in [AutonomousFoodSystem](https://github.com/aRcHmaGe333/AutonomousFoodSystem). The two connect at the delivery interface: once food is produced, it enters this network alongside household goods, hygiene products, and other deliverables.
+This repository is public and presentable as:
 
-PrecisionDelivery operates independently. It works with any supplier — local farms, commercial kitchens, cooperatives, household goods manufacturers, pharmacies. The integration with autonomous food production is the long-term convergence, not a dependency.
+- a concept repo
+- a research repo
+- a prototype repo
+- an authorship and IP-claim record
 
----
+It is **not yet a pilot-ready operating business**. The repo is explicit about that, and the remaining gaps are documented.
 
-## Status
+Recommended framing:
 
-**Current:** Conceptual architecture, service prototypes, specification documents. Ready for pilot planning.
+- public exposure: yes
+- funding readiness: yes, at an early/pre-seed narrative level
+- pilot readiness: not yet
 
-**Next:** Fleet simulation, subscriber onboarding flow, depot operations model, first-city pilot design.
+See [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md).
+All outward-facing text should also pass [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md).
 
----
+## Prototype code
 
-## Intellectual Property & Licensing
+The current codebase contains an early backend prototype for:
 
-This work is published under the **APC-VF License v2.0** (All Rights Reserved — Authorship & Patent Claim with ValueFlow Universal Access). See [LICENSE.md](LICENSE.md).
+- household consumption profiling
+- quantity adjustment logic
+- simple schedule generation
+- reusable container circulation modeling
+- operator-facing household, subscription, route, wash, and billing workflow scaffolding
+- local file-backed runtime persistence
 
-Authorship is cryptographically timestamped via RFC 3161. See [VERIFY.md](VERIFY.md) for independent verification instructions.
+Local requirements:
 
-For the technical rationale behind this proof system, see [docs/STAMPED-whitepaper.md](docs/STAMPED-whitepaper.md).
+- Node.js 18+
 
----
+Minimal local run path:
 
-## Support This Work
+```bash
+npm install
+npm start
+```
 
-If you want to see this built — subscription delivery in reusable packaging, zero waste, time returned to millions of households — you can back it directly.
+Optional sample data for POSIX shells:
 
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
+```bash
+ALLDONE_SAMPLE_DATA=true npm start
+```
 
-Every contribution funds pilot planning, fleet simulation, and container prototyping. This is infrastructure that pays for itself — your support accelerates the timeline.
+Optional sample data for PowerShell:
+
+```powershell
+$env:ALLDONE_SAMPLE_DATA='true'
+npm start
+```
+
+Prototype API entrypoint:
+
+- [index.js](src/backend/index.js)
+
+Prototype API surfaces:
+
+- `/api/distribution`
+- `/api/operations`
+
+Persistence note:
+
+- [docs/BACKEND_PERSISTENCE.md](docs/BACKEND_PERSISTENCE.md)
+
+## Reading path
+
+Start here:
+
+1. [docs/DOCUMENT_GUIDE.md](docs/DOCUMENT_GUIDE.md)
+2. [docs/INVESTOR_OVERVIEW.md](docs/INVESTOR_OVERVIEW.md)
+3. [docs/VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
+4. [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
+5. [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md)
+6. [docs/ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md)
+7. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
+8. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
+9. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
+10. [docs/TASKS.md](docs/TASKS.md)
+
+Public investor-pack structure:
+
+- [investor_pack/README.md](investor_pack/README.md)
+
+Core decisions:
+
+- [docs/packaging_guidance.md](docs/packaging_guidance.md)
+- [docs/container_material_system_spec.md](docs/container_material_system_spec.md)
+- [docs/glass_container_family_spec.md](docs/glass_container_family_spec.md)
+- [docs/CONTAINER_SOURCING_REALITY.md](docs/CONTAINER_SOURCING_REALITY.md)
+- [docs/PILOT_BRIEF.md](docs/PILOT_BRIEF.md)
+- [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
+- [docs/PILOT_READINESS_GAPS.md](docs/PILOT_READINESS_GAPS.md)
+
+Supporting technical notes:
+
+- [docs/Integrated_gravity-based_urban_logistics.md](docs/Integrated_gravity-based_urban_logistics.md)
+- [docs/vehicle_modularity.md](docs/vehicle_modularity.md)
+- [docs/reusable-packaging-systems-research.md](docs/reusable-packaging-systems-research.md)
+
+## Project priorities
+
+The immediate work is not "more features in the prototype."
+
+The immediate work is:
+
+1. lock the first pilot container set
+2. define the wash and return operating model
+3. build defensible pilot economics
+4. implement the software required to run the loop
+
+## Intellectual property and verification
+
+This work is published under the **IPClaim APC License v1.1**.
+
+- [LICENSE.md](LICENSE.md)
+- [VERIFY.md](VERIFY.md)
+
+Authorship is supported by cryptographic timestamp records in `.timestamps/`.
+
+Note: the current working tree is prepared for a new timestamped publication pass, but the proof status in [LICENSE.md](LICENSE.md) should be refreshed after the next publication commit and push.
 
 ## Contact
 
-For collaboration, licensing, pilot partnerships, or investment inquiries: [GitHub profile](https://github.com/aRcHmaGe333).
+For collaboration, licensing, pilot partnerships, or investment inquiries:
+
+- [GitHub profile](https://github.com/aRcHmaGe333)
+
+## Support
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
 
 ---
 
-**The store is a warehouse you drive to. PrecisionDelivery is the warehouse that drives to you — and eventually, the warehouse that falls to you, at the speed of gravity, using no energy at all.**
+**We source it, pack it, bring it, collect it, and reuse it. You just use it.**

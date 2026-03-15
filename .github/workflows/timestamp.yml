@@ -1,4 +1,4 @@
-name: APC Cryptographic Timestamp
+name: IPClaim Cryptographic Timestamp
 
 on:
   push:
@@ -21,27 +21,22 @@ jobs:
           echo "TREE_HASH=$TREE_HASH" >> $GITHUB_ENV
           echo "Tree hash: $TREE_HASH"
 
-          # Skip if this commit was made by the timestamp bot (prevent infinite loop)
           LAST_MSG=$(git log -1 --pretty=%s)
-          if [[ "$LAST_MSG" == "[APC]"* ]]; then
-            echo "Skipping — this commit is a timestamp proof commit."
+          if [[ "$LAST_MSG" == "[IPClaim]"* ]]; then
+            echo "Skipping timestamp proof commit."
             echo "SKIP=true" >> $GITHUB_ENV
             exit 0
           fi
 
           mkdir -p .timestamps
-
-          # Prepare hash for timestamping
           echo -n "$TREE_HASH" > /tmp/tree_hash.txt
 
-          # RFC 3161 timestamp via FreeTSA
           openssl ts -query -data /tmp/tree_hash.txt -no_nonce -sha512 -cert -out /tmp/request.tsq
           curl -s -H "Content-Type: application/timestamp-query" \
                --data-binary '@/tmp/request.tsq' \
                https://freetsa.org/tsr \
                -o .timestamps/${TREE_HASH}.tsr
 
-          # Download TSA certificates and verify
           wget -q https://freetsa.org/files/tsa.crt -O /tmp/tsa.crt
           wget -q https://freetsa.org/files/cacert.pem -O /tmp/cacert.pem
           openssl ts -verify \
@@ -55,8 +50,8 @@ jobs:
       - name: Commit timestamp proof
         if: env.SKIP != 'true'
         run: |
-          git config user.name "APC Timestamp Bot"
-          git config user.email "apc-bot@users.noreply.github.com"
+          git config user.name "IPClaim Timestamp Bot"
+          git config user.email "ipclaim-bot@users.noreply.github.com"
           git add .timestamps/
-          git diff --cached --quiet || git commit -m "[APC] Timestamp proof for tree ${{ env.TREE_HASH }}"
+          git diff --cached --quiet || git commit -m "[IPClaim] Timestamp proof for tree ${{ env.TREE_HASH }}"
           git push

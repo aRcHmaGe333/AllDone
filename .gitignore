@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log*
+Thumbs.db
+.DS_Store
+.env
+.env.*
+coverage/
+dist/
+data/runtime/*.json
+not_public/
+data_room_private/
+investor_diligence_private/

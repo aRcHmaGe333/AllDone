@@ -1,153 +1,76 @@
 # ALL RIGHTS RESERVED — AUTHORSHIP & PATENT CLAIM LICENSE
-# with VALUEFLOW UNIVERSAL ACCESS
 
-**APC-VF License v2.0 — February 2026**
+**IPClaim APC License v1.1 — applied to this repository**
 
 ---
 
 ## PREAMBLE
 
-This work exists because its Author created it. The Author published it first, publicly, with cryptographic proof of the date and content. No prior record of this work exists.
+This repository is published as a public authorship and IP claim record under the IPClaim APC license track.
 
-The Author retains complete ownership. But ownership without access is hoarding, and hoarding is waste. A superior engine blueprint sitting behind a locked door while the world builds inferior engines is a failure of civilization, not a triumph of rights.
+The position of this license is simple:
 
-This license solves both problems at once: the Author owns it, and the world can use it — under one condition.
+- the Author created and published this Work
+- the public record proves when it was published
+- publication is evidence of authorship, not abandonment of ownership
 
 ---
 
-## PART ONE: AUTHORSHIP & PATENT CLAIM
-
-### I. Declaration of Authorship
+## I. DECLARATION OF AUTHORSHIP
 
 **Author:** Slavko Stojnić
 
-The contents of this repository, project, or body of work — all files, ideas, methods, systems, and functional content herein (the "Work") — are the original creation of the Author.
+The contents of this repository — including documents, concepts, methods, systems, designs, and source files (the "Work") — are claimed as the original creation of the Author except where explicit third-party attribution states otherwise.
 
-### II. Patent Claim by Public Record
+---
 
-This publication constitutes a **public, timestamped, cryptographically verifiable patent claim**.
+## II. PUBLIC RECORD OF CLAIM
+
+This repository is published as a **public, timestamped, cryptographically verifiable authorship and IP claim record**.
+
+### Repository proof status
 
 | Proof Layer | Value |
 |---|---|
-| **Merkle Root / Tree Hash** | *(populated automatically after first push)* |
+| **Git Tree Hash** (`HEAD^{tree}`) | To be refreshed on the next publication commit after these edits |
 | **RFC 3161 Timestamp Token** | `.timestamps/*.tsr` |
-| **Date of First Publication** | February 2026 |
+| **Date of First Public Repository Timestamp** | 2026-02-21 15:13:52 UTC |
 
-The Merkle root covers every file as a single unit. The RFC 3161 token is independently verifiable by anyone using OpenSSL. No prior public record of this Work exists. The Author published first.
-
-### III. Prior Art Defense
-
-This publication establishes irrevocable prior art. Any third-party attempt to file a patent or IP claim over any concept described herein is invalidated by this public record of prior disclosure.
-
-### IV. Duration
-
-No expiration. No renewal fees. No maintenance. The timestamp is permanent. The claim stands.
+The `.timestamps/` directory contains independently verifiable timestamp tokens for published repository states. `VERIFY.md` explains how to validate them.
 
 ---
 
-## PART TWO: VALUEFLOW UNIVERSAL ACCESS
+## III. ALL RIGHTS RESERVED
 
-### V. Grant of Use Under Revenue Sharing
+No permission is granted to copy, commercialize, manufacture from, train on, or create derivative works from this Work except by the Author's explicit written permission.
 
-Despite the all-rights-reserved status declared above, the Author **grants universal, worldwide, perpetual access** to use, implement, manufacture, adapt, and build upon the Work — subject to the following condition:
-
-**Any party that generates revenue from the use of this Work, or from any derivative of this Work, must share that revenue with the Author according to the allocation rule below.**
-
-This is not a suggestion. This is the price of access.
-
-### VI. Allocation Rule
-
-The Author sets the following revenue share:
-
-```
-┌─────────────────────────────────────────────────┐
-│                                                 │
-│   AUTHOR'S SHARE:    30%                        │
-│   USER'S SHARE:      70%                        │
-│                                                 │
-└─────────────────────────────────────────────────┘
-```
-
-**Configuration notes:**
-
-- The Author may set any ratio. There is no mandated split.
-- The Author may specify different ratios for different use cases (e.g., commercial vs. educational, small business vs. enterprise).
-- The Author may update the ratio for future users. Existing agreements remain at the rate active when use began.
-- For multi-generational derivatives (A creates, B adapts, C adapts B's work), the Author may specify cascading shares or a flat pool model. If unspecified, each generation splits with its direct upstream creator at the stated ratio.
-
-### VII. What Counts as Revenue
-
-"Revenue" means any monetary or economic benefit derived from the Work or any derivative, including but not limited to: direct sales, subscription fees, licensing income, advertising revenue, service fees, consulting income attributable to the Work, manufacturing profits, and any other form of compensation.
-
-Revenue is counted at the gross level before the user's internal costs, unless the Author explicitly agrees to a net-revenue model.
-
-### VIII. Settlement
-
-Revenue sharing may be settled through any mechanism, including:
-
-- Direct payment (bank transfer, payment processor split, invoicing)
-- Payment platform integration (Stripe Connect, PayPal, etc.)
-- Periodic batch settlement (monthly, quarterly)
-- Smart contract automation (if both parties elect it)
-
-The specific mechanism is agreed between Author and user. If no mechanism is agreed, the user must report revenue quarterly and settle within 30 days of reporting.
-
-### IX. Attribution
-
-Every use of the Work or derivative must include clear attribution to the Author. At minimum:
-
-- The Author's name or designated identifier.
-- A link to the original repository or publication.
-- A statement that the work is used under APC-VF License v2.0.
-
-Removal or obscuring of attribution voids the grant of use and converts any continued use into infringement under Part One.
-
-### X. Non-Revenue Use
-
-Use of the Work that generates zero revenue — personal use, education, research, non-commercial experimentation — is **permitted freely** with attribution. The moment revenue is generated, the allocation rule activates.
-
-### XI. The Duty Clause
-
-This Work is published because the Author believes that superior knowledge must be applied wherever it is applicable. No delivery system should waste fuel, time, and human labor when a better one exists. No city should tolerate congested roads and polluted air when the logistics can be redesigned from first principles.
-
-The ValueFlow grant exists to ensure this Work reaches every place it can improve outcomes — while ensuring the Author is compensated for making it possible.
-
-**Hoarding is waste. Gatekeeping is waste. Duplication of effort when a solution already exists is waste. This license eliminates all three.**
+Publication does not waive ownership.
 
 ---
 
-## PART THREE: ENFORCEMENT AND TERMS
+## IV. PRIOR ART DEFENSE
 
-### XII. Infringement
-
-Use of the Work without revenue sharing (when revenue is generated) constitutes infringement. The Author reserves:
-
-- All legal remedies under applicable law in any jurisdiction.
-- The right to publicly identify infringers.
-- The right to revoke the ValueFlow grant for specific infringers, converting their status to unauthorized use under the all-rights-reserved terms of Part One.
-
-### XIII. Severability
-
-If any clause is unenforceable in a given jurisdiction, all others remain in effect.
-
-### XIV. Acceptance
-
-By accessing, using, implementing, or building upon the Work, you accept the terms of this license in full — the authorship claim, the revenue-sharing obligation, and the attribution requirement.
+This public record also serves as prior disclosure against later third-party claims over the same disclosed work.
 
 ---
 
-## HOW TO USE THIS LICENSE
+## V. DURATION
 
-1. Place this file as `LICENSE` in the root of your repository.
-2. Fill in: your name, your hash values, your publication date, your chosen revenue split.
-3. Run the timestamp workflow (see `VERIFY.md` and `.github/workflows/timestamp.yml`).
-4. Push. Your claim is live, your Work is accessible, your revenue share is active.
+This claim is intended to persist for as long as the public record remains accessible.
 
-For the manual timestamp process or automated GitHub Actions setup, see `VERIFY.md`.
+---
+
+## VI. ACCEPTANCE
+
+By accessing, reading, downloading, cloning, or otherwise interacting with this repository, you acknowledge the Author's claim of authorship and origin. No use rights are granted beyond what applicable law requires.
+
+---
+
+## VERIFICATION
+
+See [VERIFY.md](VERIFY.md) for independent verification instructions.
 
 ---
 
 **© Slavko Stojnić — 2026. All rights reserved.**
-**Authorship & Patent Claim established by public record.**
-**Universal access granted under ValueFlow revenue sharing.**
-**Use it. Build on it. Pay the creator. Move the species forward.**
+**IPClaim APC license track.**
