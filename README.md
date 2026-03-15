@@ -77,17 +77,10 @@ npm install
 npm start
 ```
 
-Optional sample data for POSIX shells:
+Optional demo run with sample data:
 
 ```bash
-ALLDONE_SAMPLE_DATA=true npm start
-```
-
-Optional sample data for PowerShell:
-
-```powershell
-$env:ALLDONE_SAMPLE_DATA='true'
-npm start
+npm run demo:api
 ```
 
 Prototype API entrypoint:
@@ -102,6 +95,7 @@ Prototype API surfaces:
 Persistence note:
 
 - [docs/BACKEND_PERSISTENCE.md](docs/BACKEND_PERSISTENCE.md)
+- [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
 
 ## Reading path
 
@@ -113,10 +107,11 @@ Start here:
 4. [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
 5. [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md)
 6. [docs/ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md)
-7. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
-8. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
-9. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
-10. [docs/TASKS.md](docs/TASKS.md)
+7. [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
+8. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
+9. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
+10. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
+11. [docs/TASKS.md](docs/TASKS.md)
 
 Public investor-pack structure:
 
