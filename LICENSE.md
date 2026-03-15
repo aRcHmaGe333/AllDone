@@ -32,11 +32,12 @@ This repository is published as a **public, timestamped, cryptographically verif
 
 | Proof Layer | Value |
 |---|---|
-| **Git Tree Hash** (`HEAD^{tree}`) | To be refreshed on the next publication commit after these edits |
-| **RFC 3161 Timestamp Token** | `.timestamps/*.tsr` |
+| **Latest proved content tree hash** | See the newest `.timestamps/<TREE_HASH>.tsr` filename and its matching `[IPClaim] Timestamp proof for tree <TREE_HASH>` commit in repository history. |
+| **Latest RFC 3161 timestamp token** | `.timestamps/<TREE_HASH>.tsr` |
+| **Latest proof commit** | The newest `[IPClaim] Timestamp proof for tree <TREE_HASH>` commit on the public branch. |
 | **Date of First Public Repository Timestamp** | 2026-02-21 15:13:52 UTC |
 
-The `.timestamps/` directory contains independently verifiable timestamp tokens for published repository states. `VERIFY.md` explains how to validate them.
+The `.timestamps/` directory contains independently verifiable timestamp tokens for published repository states. `VERIFY.md` explains how to validate both the proved content tree and the proof commit that publishes its token.
 
 ---
 

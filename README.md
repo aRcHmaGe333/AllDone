@@ -158,7 +158,7 @@ This work is published under the **IPClaim APC License v1.1**.
 
 Authorship is supported by cryptographic timestamp records in `.timestamps/`.
 
-Note: the current working tree is prepared for a new timestamped publication pass, but the proof status in [LICENSE.md](LICENSE.md) should be refreshed after the next publication commit and push.
+The latest proof chain has been refreshed for the current public AllDone publication state. See [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
 
 ## Contact
 

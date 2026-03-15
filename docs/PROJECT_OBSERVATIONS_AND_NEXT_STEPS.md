@@ -41,7 +41,7 @@ It does not yet cover the full system that AllDone needs:
 
 1. Keep the repo framed as concept, research, and IP record until the operating model is genuinely testable.
 2. Prototype only a small number of container SKUs first.
-3. Refresh the timestamp proof chain after the next publish step so the new AllDone state is covered.
+3. Refresh the timestamp proof chain after each material public update so the published claim record stays current.
 
 ### Product build order
 

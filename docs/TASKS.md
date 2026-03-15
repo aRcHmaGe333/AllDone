@@ -61,12 +61,16 @@ Status: completed
 
 ### P0.2 Refresh the timestamp proof chain for the current AllDone state
 
+Status: completed
+
 - Commit the renamed and consolidated repo.
 - Push from the `AllDone` path.
 - Confirm a fresh `.timestamps` proof is created for the current repository state.
 - Update `LICENSE.md` proof status after the new timestamp exists.
 
 ### P0.3 Update the GitHub remote after the remote repo is renamed
+
+Status: completed
 
 - Change the repository slug from `PrecisionDelivery` to `AllDone` on the hosting side.
 - Update `.git/config` remote URL locally after the remote rename is real.
@@ -373,7 +377,7 @@ Status: completed
 
 ## Immediate recommended order
 
-1. Complete Phase 0.2 and 0.3.
-2. Complete `P1.3`.
-3. Harden the prototype MVP beyond in-memory scope if a live pilot build starts.
+1. Maintain the timestamp proof chain after each material public update.
+2. Replace indicative sourcing assumptions with real supplier quotes when live pilot planning starts.
+3. Harden the prototype MVP beyond local-file persistence if a live pilot build starts.
 4. Replace planning assumptions with live pilot evidence.
