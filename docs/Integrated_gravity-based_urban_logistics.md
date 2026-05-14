@@ -8,7 +8,7 @@ This is more or less my work from a course at Stockholm University, Design for C
 
 Truck traffic is replaced by tube-based deliveries and counterbalanced vertical movement.
 Uncertainty is minimized through scheduled deliveries and predictive corrections.
-Material waste is avoided by design: reusable containers, portion matching, and biomass reabsorption.
+Material waste is avoided by design: reusable containers, portion matching, and biomass reabsorption. 
 Overproduction and shortfall are actively balanced through continuous feedback from consumption and return patterns.
 All needs are anticipated and bundled proactively, reducing missed items to statistical anomalies with automatic recovery.
 
@@ -20,8 +20,8 @@ MODULES & INFRASTRUCTURE
    Tubes service every building block, often connected through a central vertical shaft or elevator core.
 
 2. Self-Maintaining Food Grid
-   Localized food nodes (indoor towers, hydroponics, bioreactors) produce per-household nutrition with minimal human oversight.
-   Automatically receives inputs: seeds, nutrients, compost, water via gravity tubes. Real-time feedback from consumption patterns drives production scaling.
+   Localized food nodes — vertical hydroponic/aeroponic modules, small-scale bioreactors, and integrated cooking/portioning units — are prototyped in the AutonomousFoodSystem project (GitHub: https://github.com/aRcHmaGe333/AutonomousFoodSystem). The project is in prototyping phase: it provides APIs and prototype services for growing modules, recipe and cooking automation, dairy-first livestock management, analytics, and closed-loop waste handling; physical sensor/actuator drivers and deployment-specific delivery hardware remain simulation-first.
+   Distribution and precision transport (gravity tubes, kinetic relays) are handled by a separate project (PrecisionDelivery: https://github.com/aRcHmaGe333/PrecisionDelivery). AutonomousFoodSystem assumes inputs (seeds, nutrients, compost, water) are provided via local supply or external delivery interfaces; real-time consumption telemetry and analytics drive production scaling and portion calibration.
 
 3. Reusable Container System
    Single-tier, standardized containers for all deliveries (food, medicine, clothes, materials).
