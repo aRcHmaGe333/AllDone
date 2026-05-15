@@ -4,6 +4,8 @@ Status: active
 
 This document states what AllDone gives people, why that matters, and what must exist for the value to be real.
 
+For a fuller pitch-oriented expansion of the short value bullets, see [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md).
+
 ## Core promise
 
 AllDone removes the household shopping chore for recurring needs.

@@ -12,6 +12,8 @@ Instead of repeated shopping trips and disposable packaging, AllDone uses reusab
 - reduces disposable packaging
 - keeps homes supplied with less friction
 - aligns delivered quantity more closely with real use
+- reduces waste-related spending that households usually do not even name as spending
+- can improve building-level waste and delivery conditions in dense nodes
 
 ## Why it matters
 
@@ -24,6 +26,10 @@ The current retail loop still wastes:
 - labor through fragmented last-mile behavior
 
 AllDone is aimed at removing the recurring shopping chore rather than slightly optimizing the same disposable model.
+
+The right comparison is not courier versus courier.
+
+The right comparison is the full incumbent stack versus a standardized closed-loop replacement.
 
 ## Pilot shape
 
@@ -53,6 +59,12 @@ The default first pilot is:
 - route density and stop efficiency
 - early contribution logic
 - repeat household usage
+
+## Value capture logic
+
+AllDone should leave the household clearly better off and capture only part of the savings created by the loop.
+
+That makes it closer to shared-savings infrastructure than to a thin delivery-margin business.
 
 ## Current stage
 

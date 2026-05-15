@@ -25,6 +25,8 @@ The current retail model wastes:
 
 AllDone is aimed at removing that chore layer rather than slightly improving the same retail loop.
 
+The short version is useful, but it is not enough by itself. For the fuller pitch surface, see [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md).
+
 ## The value created
 
 For households, AllDone provides:
@@ -33,16 +35,28 @@ For households, AllDone provides:
 - lower packaging clutter
 - less recurring shopping friction
 - more predictable supply of recurring goods
+- less direct and indirect waste spending
+- access to pooled-demand efficiency without awkward bulk buying
 
 For operators and partners, AllDone provides:
 
 - recurring demand instead of one-off transactions
 - standardized packaging and return behavior
 - a denser and more controllable operating loop
+- a path toward infrastructure-style rather than courier-style economics
+
+For buildings and dense residential nodes, AllDone provides:
+
+- fewer fragmented drops
+- less packaging overflow
+- a cleaner recurring service pattern
+- potential waste-system relief at building level
 
 For investors, the relevant point is that AllDone is not trying to win on "faster delivery." It is trying to replace a repeated household chore with a reusable, recurring system.
 
 The economic frame should be system-level, not courier-level. See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md).
+
+The business capture logic is also not ordinary retail markup logic. The stronger framing is shared-savings infrastructure: the household remains clearly better off, and AllDone captures a minority share of the value created by a denser closed loop.
 
 ## Current repo status
 
@@ -143,6 +157,7 @@ The wrong interpretation would be that the business is already launch-ready. The
 - [EXTERNAL_POSITIONING.md](EXTERNAL_POSITIONING.md)
 - [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md)
 - [VALUE_PROPOSITION.md](VALUE_PROPOSITION.md)
+- [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md)
 - [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md)
 - [PILOT_UNIT_ECONOMICS.md](PILOT_UNIT_ECONOMICS.md)
 - [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md)

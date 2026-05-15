@@ -1,3 +1,144 @@
+**AllDone**
+
+**Never shop for the everyday stuff again.**
+
+AllDone is a new system designed to replace repetitive household shopping with a smart, closed-loop supply service. Your recurring needs --- groceries, prepared food, hygiene products, cleaning supplies, and other daily consumables --- would arrive in durable, reusable containers. Quantities would adapt automatically to your actual usage. When empty, the containers would be collected, industrially washed, refilled, and returned to circulation. No disposable packaging. No more guessing how much to buy. Just reliable supply that improves over time.
+
+### The core idea
+
+It's a complete loop: production → reusable packaging → home use → return → professional cleaning → reuse. Reusable glass is the planned default for consumer-facing containers.
+
+This isn't another delivery app layered on top of the broken retail system. It's a fundamentally different operating model that removes the recurring chore of shopping, reduces waste, and creates lasting efficiency for everyone involved.
+
+### Why this matters
+
+Today's way of buying everyday goods wastes:
+
+- Your precious time running errands
+
+- Money and resources on single-use packaging
+
+- Transportation and logistics effort
+
+- Food (through overbuying, poor timing, and spoilage)
+
+- Human labor across fragmented shopping and last-mile delivery
+
+AllDone is built to eliminate that entire layer of friction and waste rather than just tweaking it.
+
+### Who this creates value for
+
+- **Households & consumers**: Simpler daily life with less hassle, less waste, and less guilt.
+
+- **Investors**: A high-leverage opportunity with recurring revenue, strong system-level cost savings, and clear sustainability advantages.
+
+- **Future teammates & operators**: A meaningful project at the intersection of logistics, software, sustainability, and better everyday living.
+
+- **Potential partners**: Producers, wash facilities, retailers, and pilot cities who want to participate in building reusable infrastructure at scale.
+
+### Current status
+
+This is a public concept, research, and early prototype project. It is **not yet** an operating service --- there is no delivery happening today. The repository is intentionally open as a clear record of the idea, the economics, the technical foundation, and the remaining work needed to make it real.
+
+It is ready for:
+
+- Serious conversations
+
+- Early funding discussions
+
+- Feedback and collaboration
+
+It is **not yet** ready for a live neighborhood pilot.
+
+### Working prototype
+
+The codebase already includes a functional early backend for:
+
+- Household consumption profiling
+
+- Smart quantity adjustment logic
+
+- Schedule generation
+
+- Reusable container circulation modeling
+
+- Basic operator workflows (households, subscriptions, routes, washing, billing)
+
+**Tech**: Node.js 18+
+
+Quick start:
+
+```bash
+
+npm install
+
+npm start
+
+```
+
+Demo with sample data:
+
+```bash
+
+npm run demo:api
+
+```
+
+### Recommended reading path
+
+Start here:
+
+1\. [DOCUMENT_GUIDE.md](docs/DOCUMENT_GUIDE.md)
+
+2\. [INVESTOR_OVERVIEW.md](docs/INVESTOR_OVERVIEW.md)
+
+3\. [VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
+
+4\. [VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
+
+5\. [EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
+
+6\. [PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
+
+7\. [PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
+
+8\. [steer.md](steer.md) --- current priorities and roadmap
+
+Full investor pack: [investor_pack/README.md](investor_pack/README.md)
+
+### Immediate priorities
+
+To turn this into reality we need to focus on:
+
+1\. Locking in the first pilot container set
+
+2\. Defining the industrial washing and return logistics model
+
+3\. Building rock-solid pilot unit economics
+
+4\. Completing the minimal software required to run the full loop
+
+### Intellectual property & verification
+
+Published under the **IPClaim APC License v1.1**. Authorship is supported by cryptographic timestamps.
+
+See [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
+
+### Get involved
+
+Looking for collaborators, pilot partners, licensing opportunities, or investors who want to help build this:
+
+→ [GitHub profile](https://github.com/aRcHmaGe333)
+
+**Support the work**  
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
+
+---
+
+**The vision is simple: Source it, pack it, bring it, collect it, wash it, and reuse it --- so you can just use it.**
+
+
 # AllDone
 
 **Closed-loop home provisioning built around reusable containers, return logistics, industrial washing, and recirculation.**
@@ -10,7 +151,7 @@ Reusable glass is the default planned consumer-facing container standard.
 
 ## What AllDone is
 
-AllDone is not just a delivery app.
+AllDone is far from a delivery service.
 
 It is a broader operating model:
 
@@ -27,13 +168,19 @@ The project is aimed at recurring household needs such as:
 
 The current retail model wastes:
 
-- consumer time
-- packaging
-- transport effort
-- food through mismatch and overbuying
-- labor through fragmented shopping and last-mile behavior
+- [consumer time](docs/VALUE_ANGLE_BREAKDOWN.md#consumer-time)
+- [packaging](docs/VALUE_ANGLE_BREAKDOWN.md#packaging-removal)
+- [transport effort](docs/VALUE_ANGLE_BREAKDOWN.md#transport-compression)
+- [food through mismatch and overbuying](docs/VALUE_ANGLE_BREAKDOWN.md#waste-and-mismatch-reduction)
+- [labor through fragmented shopping and last-mile behavior](docs/VALUE_ANGLE_BREAKDOWN.md#labor-simplification)
 
 AllDone is designed to remove that chore layer rather than slightly optimize the same disposable system.
+
+Broader value and capture logic:
+
+- [docs/VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
+- [docs/VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
+- [docs/TOTAL_SYSTEM_VALUE_MODEL.md](docs/TOTAL_SYSTEM_VALUE_MODEL.md)
 
 ## Current repo status
 
@@ -104,15 +251,17 @@ Start here:
 1. [docs/DOCUMENT_GUIDE.md](docs/DOCUMENT_GUIDE.md)
 2. [docs/INVESTOR_OVERVIEW.md](docs/INVESTOR_OVERVIEW.md)
 3. [docs/VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
-4. [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
-5. [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md)
-6. [docs/ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md)
-7. [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
-8. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
-9. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
-10. [docs/TOTAL_SYSTEM_VALUE_MODEL.md](docs/TOTAL_SYSTEM_VALUE_MODEL.md)
-11. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
-12. [docs/TASKS.md](docs/TASKS.md)
+4. [docs/VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
+5. [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
+6. [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md)
+7. [docs/ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md)
+8. [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
+9. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
+10. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
+11. [docs/TOTAL_SYSTEM_VALUE_MODEL.md](docs/TOTAL_SYSTEM_VALUE_MODEL.md)
+12. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
+13. [docs/TASKS.md](docs/TASKS.md)
+14. [steer.md](steer.md) (Current Priorities and Roadmap)
 
 Public investor-pack structure:
 
