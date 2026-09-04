@@ -1,320 +1,103 @@
-**AllDone**
+# AllDone
 
 **Never shop for the everyday stuff again.**
 
-AllDone is a new system designed to replace repetitive household shopping with a smart, closed-loop supply service. Your recurring needs --- groceries, prepared food, hygiene products, cleaning supplies, and other daily consumables --- would arrive in durable, reusable containers. Quantities would adapt automatically to your actual usage. When empty, the containers would be collected, industrially washed, refilled, and returned to circulation. No disposable packaging. No more guessing how much to buy. Just reliable supply that improves over time.
+You use things. They run out. Somebody should know roughly how much you use, bring the next amount, take the empty container back, wash it, refill it and do it again.
 
-### The core idea
+That is AllDone.
 
-It's a complete loop: production → reusable packaging → home use → return → professional cleaning → reuse. Reusable glass is the planned default for consumer-facing containers.
+The obvious targets are the things people keep buying over and over anyway: groceries, prepared food, hygiene products, household consumables and whatever else fits the same loop.
 
-This isn't another delivery app layered on top of the broken retail system. It's a fundamentally different operating model that removes the recurring chore of shopping, reduces waste, and creates lasting efficiency for everyone involved.
+The container comes back. It does not become garbage because you used what was inside it. Reusable glass is the current planned default for the consumer-facing container set.
 
-### Why this matters
+The loop is basically:
 
-Today's way of buying everyday goods wastes:
+**produce -> pack -> bring -> use -> collect -> wash -> refill -> bring again**
 
-- Your precious time running errands
+The goal is not to make shopping 12% nicer. The goal is to make a large part of shopping disappear.
 
-- Money and resources on single-use packaging
+## Why bother
 
-- Transportation and logistics effort
+Because the current version is absurdly repetitive. People keep spending time buying the same things. Packaging keeps getting manufactured, carried home and thrown away. Delivery and shopping trips are fragmented. Food gets overbought or arrives at the wrong time and gets wasted.
 
-- Food (through overbuying, poor timing, and spoilage)
+AllDone tries to remove as much of that repeated work and material as possible in one system instead of fixing each little symptom separately.
 
-- Human labor across fragmented shopping and last-mile delivery
+There is a sustainability angle for the same reason: if the container keeps circulating, deliveries can be consolidated, quantities can follow actual use and fewer things need to be produced, moved and discarded for no useful reason.
 
-AllDone is built to eliminate that entire layer of friction and waste rather than just tweaking it.
+I have a broader sustainability bundle around this too: [SUSTAINABILITY_PORTFOLIO.md](docs/SUSTAINABILITY_PORTFOLIO.md).
 
-### Who this creates value for
+## What actually exists right now
 
-- **Households & consumers**: Simpler daily life with less hassle, less waste, and less guilt.
+This is not a live service yet. Nobody is getting an AllDone delivery today.
 
-- **Investors**: A high-leverage opportunity with recurring revenue, strong system-level cost savings, and clear sustainability advantages.
+There is, however, a working early backend. It already covers:
 
-- **Future teammates & operators**: A meaningful project at the intersection of logistics, software, sustainability, and better everyday living.
+- household consumption profiles
+- quantity adjustment
+- schedule generation
+- reusable-container circulation modelling
+- household/subscription/route/wash/billing workflow scaffolding
+- local runtime persistence
 
-- **Potential partners**: Producers, wash facilities, retailers, and pilot cities who want to participate in building reusable infrastructure at scale.
+So this is past the "I wrote an idea in a paragraph" stage. It is still before the "we can run a real neighbourhood without embarrassing ourselves" stage.
 
-### Current status
-
-This is a public concept, research, and early prototype project. It is **not yet** an operating service --- there is no delivery happening today. The repository is intentionally open as a clear record of the idea, the economics, the technical foundation, and the remaining work needed to make it real.
-
-It is ready for:
-
-- Serious conversations
-
-- Early funding discussions
-
-- Feedback and collaboration
-
-It is **not yet** ready for a live neighborhood pilot.
-
-### Working prototype
-
-The codebase already includes a functional early backend for:
-
-- Household consumption profiling
-
-- Smart quantity adjustment logic
-
-- Schedule generation
-
-- Reusable container circulation modeling
-
-- Basic operator workflows (households, subscriptions, routes, washing, billing)
-
-**Tech**: Node.js 18+
-
-Quick start:
-
-```bash
-
-npm install
-
-npm start
-
-```
-
-Demo with sample data:
-
-```bash
-
-npm run demo:api
-
-```
-
-### Recommended reading path
-
-Start here:
-
-1\. [DOCUMENT_GUIDE.md](docs/DOCUMENT_GUIDE.md)
-
-2\. [INVESTOR_OVERVIEW.md](docs/INVESTOR_OVERVIEW.md)
-
-3\. [VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
-
-4\. [VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
-
-5\. [EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
-
-6\. [PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
-
-7\. [PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
-
-8\. [steer.md](steer.md) --- current priorities and roadmap
-
-Full investor pack: [investor_pack/README.md](investor_pack/README.md)
-
-### Immediate priorities
-
-To turn this into reality we need to focus on:
-
-1\. Locking in the first pilot container set
-
-2\. Defining the industrial washing and return logistics model
-
-3\. Building rock-solid pilot unit economics
-
-4\. Completing the minimal software required to run the full loop
-
-### Intellectual property & verification
-
-Published under the **IPClaim APC License v1.1**. Authorship is supported by cryptographic timestamps.
-
-See [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
-
-### Get involved
-
-Looking for collaborators, pilot partners, licensing opportunities, or investors who want to help build this:
-
-→ [GitHub profile](https://github.com/aRcHmaGe333)
-
-**Support the work**  
-
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
-
----
-
-**The vision is simple: Source it, pack it, bring it, collect it, wash it, and reuse it --- so you can just use it.**
-
-
-# AllDone
-
-**Closed-loop home provisioning built around reusable containers, return logistics, industrial washing, and recirculation.**
-
-AllDone is a concept and prototype project for replacing repetitive household shopping with a managed supply loop. Goods arrive in reusable containers, quantities adapt over time, and containers are collected, washed, refilled, and returned to circulation.
-
-Reusable glass is the default planned consumer-facing container standard.
-
----
-
-## What AllDone is
-
-AllDone is far from a delivery service.
-
-It is a broader operating model:
-
-**production -> packaging -> circulation -> home supply -> return -> reuse**
-
-The project is aimed at recurring household needs such as:
-
-- groceries and prepared food
-- hygiene products
-- household consumables
-- other goods that fit a managed return-and-reuse loop
-
-## Why it matters
-
-The current retail model wastes:
-
-- [consumer time](docs/VALUE_ANGLE_BREAKDOWN.md#consumer-time)
-- [packaging](docs/VALUE_ANGLE_BREAKDOWN.md#packaging-removal)
-- [transport effort](docs/VALUE_ANGLE_BREAKDOWN.md#transport-compression)
-- [food through mismatch and overbuying](docs/VALUE_ANGLE_BREAKDOWN.md#waste-and-mismatch-reduction)
-- [labor through fragmented shopping and last-mile behavior](docs/VALUE_ANGLE_BREAKDOWN.md#labor-simplification)
-
-AllDone is designed to remove that chore layer rather than slightly optimize the same disposable system.
-
-Broader value and capture logic:
-
-- [docs/VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
-- [docs/VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
-- [docs/TOTAL_SYSTEM_VALUE_MODEL.md](docs/TOTAL_SYSTEM_VALUE_MODEL.md)
-
-## Current repo status
-
-This repository is public and presentable as:
-
-- a concept repo
-- a research repo
-- a prototype repo
-- an authorship and IP-claim record
-
-It is **not yet a pilot-ready operating business**. The repo is explicit about that, and the remaining gaps are documented.
-
-Recommended framing:
-
-- public exposure: yes
-- funding readiness: yes, at an early/pre-seed narrative level
-- pilot readiness: not yet
-
-See [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md).
-All outward-facing text should also pass [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md).
-
-## Prototype code
-
-The current codebase contains an early backend prototype for:
-
-- household consumption profiling
-- quantity adjustment logic
-- simple schedule generation
-- reusable container circulation modeling
-- operator-facing household, subscription, route, wash, and billing workflow scaffolding
-- local file-backed runtime persistence
-
-Local requirements:
-
-- Node.js 18+
-
-Minimal local run path:
+Node.js 18+:
 
 ```bash
 npm install
 npm start
 ```
 
-Optional demo run with sample data:
+Sample-data demo:
 
 ```bash
 npm run demo:api
 ```
 
-Prototype API entrypoint:
+The prototype API starts in [src/backend/index.js](src/backend/index.js).
 
-- [index.js](src/backend/index.js)
+## What has to happen before a real pilot
 
-Prototype API surfaces:
+The next work is much less mysterious than the size of the idea makes it sound:
 
-- `/api/distribution`
-- `/api/operations`
+1. Decide the first small container set.
+2. Nail down how collection, industrial washing and return actually work.
+3. Get the pilot economics to the point where the numbers survive contact with reality.
+4. Finish the software needed to operate that loop.
 
-Persistence note:
+The current pilot planning assumes staying deliberately small and dense first. I would much rather prove one boring loop that works every week than draw a giant map of cities we do not operate in.
 
-- [docs/BACKEND_PERSISTENCE.md](docs/BACKEND_PERSISTENCE.md)
-- [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
+Useful detail is here:
 
-## Reading path
+- [Investor overview](docs/INVESTOR_OVERVIEW.md)
+- [Pilot model and assumptions](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
+- [Pilot unit economics](docs/PILOT_UNIT_ECONOMICS.md)
+- [Container material system](docs/container_material_system_spec.md)
+- [Container sourcing reality](docs/CONTAINER_SOURCING_REALITY.md)
+- [Architecture](docs/ARCHITECTURE_OVERVIEW.md)
+- [Current priorities](steer.md)
 
-Start here:
+## Funding / partners / somebody who can actually help make it exist
 
-1. [docs/DOCUMENT_GUIDE.md](docs/DOCUMENT_GUIDE.md)
-2. [docs/INVESTOR_OVERVIEW.md](docs/INVESTOR_OVERVIEW.md)
-3. [docs/VALUE_PROPOSITION.md](docs/VALUE_PROPOSITION.md)
-4. [docs/VALUE_ANGLE_BREAKDOWN.md](docs/VALUE_ANGLE_BREAKDOWN.md)
-5. [docs/EXTERNAL_POSITIONING.md](docs/EXTERNAL_POSITIONING.md)
-6. [docs/EXPOSURE_GATE.md](docs/EXPOSURE_GATE.md)
-7. [docs/ARCHITECTURE_OVERVIEW.md](docs/ARCHITECTURE_OVERVIEW.md)
-8. [docs/API_QUICKSTART.md](docs/API_QUICKSTART.md)
-9. [docs/PILOT_MODEL_AND_ASSUMPTIONS.md](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
-10. [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
-11. [docs/TOTAL_SYSTEM_VALUE_MODEL.md](docs/TOTAL_SYSTEM_VALUE_MODEL.md)
-12. [docs/FUNDRAISING_READINESS.md](docs/FUNDRAISING_READINESS.md)
-13. [docs/TASKS.md](docs/TASKS.md)
-14. [steer.md](steer.md) (Current Priorities and Roadmap)
+This is ready to discuss with people who can help turn it into a real pilot: funding, wash/return operations, reusable packaging, production, logistics, buildings/cities, research or implementation.
 
-Public investor-pack structure:
+The useful question is not "is reusable packaging nice?" It is whether the whole loop can be made better enough than repeated retail + disposable packaging + fragmented delivery that people simply prefer it.
 
-- [investor_pack/README.md](investor_pack/README.md)
+That is what I want to prove.
 
-Core decisions:
+## IP / verification
 
-- [docs/packaging_guidance.md](docs/packaging_guidance.md)
-- [docs/container_material_system_spec.md](docs/container_material_system_spec.md)
-- [docs/glass_container_family_spec.md](docs/glass_container_family_spec.md)
-- [docs/CONTAINER_SOURCING_REALITY.md](docs/CONTAINER_SOURCING_REALITY.md)
-- [docs/PILOT_BRIEF.md](docs/PILOT_BRIEF.md)
-- [docs/PILOT_UNIT_ECONOMICS.md](docs/PILOT_UNIT_ECONOMICS.md)
-- [docs/PILOT_READINESS_GAPS.md](docs/PILOT_READINESS_GAPS.md)
-
-Supporting technical notes:
-
-- [docs/Integrated_gravity-based_urban_logistics.md](docs/Integrated_gravity-based_urban_logistics.md)
-- [docs/vehicle_modularity.md](docs/vehicle_modularity.md)
-- [docs/reusable-packaging-systems-research.md](docs/reusable-packaging-systems-research.md)
-
-## Project priorities
-
-The immediate work is not "more features in the prototype."
-
-The immediate work is:
-
-1. lock the first pilot container set
-2. define the wash and return operating model
-3. build defensible pilot economics
-4. implement the software required to run the loop
-
-## Intellectual property and verification
-
-This work is published under the **IPClaim APC License v1.1**.
+The project is published under the **IPClaim APC License v1.1**. Authorship is backed by cryptographic timestamp records.
 
 - [LICENSE.md](LICENSE.md)
 - [VERIFY.md](VERIFY.md)
 
-Authorship is supported by cryptographic timestamp records in `.timestamps/`.
-
-The latest proof chain has been refreshed for the current public AllDone publication state. See [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
-
 ## Contact
 
-For collaboration, licensing, pilot partnerships, or investment inquiries:
+For collaboration, investment, pilots, licensing or implementation: [GitHub profile](https://github.com/aRcHmaGe333)
 
-- [GitHub profile](https://github.com/aRcHmaGe333)
-
-## Support
-
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/earthcraft)
+[Support the work](https://ko-fi.com/earthcraft)
 
 ---
 
-**We source it, pack it, bring it, collect it, and reuse it. You just use it.**
+**Source it, pack it, bring it, collect it, wash it, reuse it. You just use it.**
