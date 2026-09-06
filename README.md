@@ -1,103 +1,77 @@
 # AllDone
 
-**Never shop for the everyday stuff again.**
+**AllDone removes grocery shopping by replacing it with continuous food supply.**
 
-You use things. They run out. Somebody should know roughly how much you use, bring the next amount, take the empty container back, wash it, refill it and do it again.
+The value starts there, because grocery shopping is not one useful activity surrounded by a few inefficiencies; it is an entire repeated process built around keeping food in the home.
 
-That is AllDone.
+Food is selected again, bought again, carried again, packaged again, transported again, checked again, partly forgotten, partly spoiled, and then the same cycle starts over.
 
-The obvious targets are the things people keep buying over and over anyway: groceries, prepared food, hygiene products, household consumables and whatever else fits the same loop.
+AllDone replaces that cycle with a managed supply loop that follows actual consumption closely enough for food to arrive because it is needed, not because somebody has gone shopping again.
 
-The container comes back. It does not become garbage because you used what was inside it. Reusable glass is the current planned default for the consumer-facing container set.
+That removes the supermarket trip itself, the repeated planning around it, the carrying, the interruptions, and the constant low-grade work of checking what ran out and deciding how much to buy next.
 
-The loop is basically:
+## The waste disappears with the shopping process
 
-**produce -> pack -> bring -> use -> collect -> wash -> refill -> bring again**
+When supply follows actual consumption, the system no longer needs to depend on guessed household quantities and retail pack sizes, which is what allows stale food, spoilage, overbuying, forgotten food and avoidable food waste to be designed out of the loop rather than dealt with after the purchase.
 
-The goal is not to make shopping 12% nicer. The goal is to make a large part of shopping disappear.
+Unavoidable food remains are separated from mixed household waste and returned as compost, with the system targeting complete recovery of food remains into the compost stream instead of sending organic matter to landfill.
 
-## Why bother
+Reusable containers remove the plastic and cardboard waste created by ordinary grocery packaging because the container remains part of the system after the food inside it is consumed.
 
-Because the current version is absurdly repetitive. People keep spending time buying the same things. Packaging keeps getting manufactured, carried home and thrown away. Delivery and shopping trips are fragmented. Food gets overbought or arrives at the wrong time and gets wasted.
+Those containers are collected, industrially washed, refilled and returned to circulation, with reusable glass as the current planned default for the consumer-facing food container set where it is operationally suitable.
 
-AllDone tries to remove as much of that repeated work and material as possible in one system instead of fixing each little symptom separately.
+The return route therefore has value twice: it prevents the container from becoming waste and gives the next supply cycle a container that already exists.
 
-There is a sustainability angle for the same reason: if the container keeps circulating, deliveries can be consolidated, quantities can follow actual use and fewer things need to be produced, moved and discarded for no useful reason.
+## The logistics are replaced as well
 
-I have a broader sustainability bundle around this too: [SUSTAINABILITY_PORTFOLIO.md](docs/SUSTAINABILITY_PORTFOLIO.md).
+Ordinary grocery supply spends transport twice: the retail system moves food through its own chain and households then perform millions of separate final collection trips themselves.
 
-## What actually exists right now
+AllDone replaces those fragmented household trips with recurring supply-and-return routes that can be planned around actual demand instead of independent shopping events.
 
-This is not a live service yet. Nobody is getting an AllDone delivery today.
+That removes the fossil-fuel spending and exhaust associated with grocery-shopping trips and gives the remaining logistics a much smaller, consolidated transport problem to solve without fossil-fuel operation.
 
-There is, however, a working early backend. It already covers:
+The same consolidation removes repeated parking, stop-start driving, overlapping delivery movement and a large amount of low-value transport effort around food that was going to the same homes anyway.
 
-- household consumption profiles
-- quantity adjustment
-- schedule generation
-- reusable-container circulation modelling
-- household/subscription/route/wash/billing workflow scaffolding
-- local runtime persistence
+## The economic value is larger than delivery
 
-So this is past the "I wrote an idea in a paragraph" stage. It is still before the "we can run a real neighbourhood without embarrassing ourselves" stage.
+The relevant comparison is not AllDone versus a courier bringing one grocery order, because that preserves almost the entire system AllDone is meant to replace.
 
-Node.js 18+:
+The relevant comparison is the full cost of grocery shopping, disposable food packaging, fragmented transport, household planning and carrying, food mismatch, spoilage, organic waste handling and repeated retail handling against the cost of reusable containers, washing, refill, consolidated delivery, return logistics and the software that coordinates the loop.
 
-```bash
-npm install
-npm start
-```
+That matters because AllDone can create value in several places at once rather than needing one narrow margin to pay for the whole system.
 
-Sample-data demo:
+Households recover time, attention, physical effort, transport spending and food that would otherwise be wasted.
 
-```bash
-npm run demo:api
-```
+Buildings and waste systems receive less packaging volume and less organic waste.
 
-The prototype API starts in [src/backend/index.js](src/backend/index.js).
+Suppliers gain clearer recurring demand and a tighter relationship between packed quantity and actual consumption.
 
-## What has to happen before a real pilot
+The operator gains a recurring service whose value comes from removing costs and waste from the existing system rather than adding another transaction layer on top of them.
 
-The next work is much less mysterious than the size of the idea makes it sound:
+The central economic thesis is therefore that the incumbent grocery loop is wasteful enough for a well-run closed loop to be better overall even after the real costs of containers, washing, return logistics, breakage, refill operations and software are included.
 
-1. Decide the first small container set.
-2. Nail down how collection, industrial washing and return actually work.
-3. Get the pilot economics to the point where the numbers survive contact with reality.
-4. Finish the software needed to operate that loop.
+## What already exists
 
-The current pilot planning assumes staying deliberately small and dense first. I would much rather prove one boring loop that works every week than draw a giant map of cities we do not operate in.
+The project already has a working early backend for household consumption profiles, quantity adjustment, schedule generation, reusable-container circulation, route/wash/billing workflows and local persistence, which means the coordination problem is already represented in executable software rather than existing only as a concept.
 
-Useful detail is here:
+That software has value because the physical loop depends on knowing what each household normally consumes, what has to be packed next, which containers are out, which have returned, which have been washed and what each route has to carry in both directions.
 
-- [Investor overview](docs/INVESTOR_OVERVIEW.md)
-- [Pilot model and assumptions](docs/PILOT_MODEL_AND_ASSUMPTIONS.md)
-- [Pilot unit economics](docs/PILOT_UNIT_ECONOMICS.md)
-- [Container material system](docs/container_material_system_spec.md)
-- [Container sourcing reality](docs/CONTAINER_SOURCING_REALITY.md)
-- [Architecture](docs/ARCHITECTURE_OVERVIEW.md)
-- [Current priorities](steer.md)
+The current implementation is still pre-pilot, so its value is evidence that the operating logic can be built and tested while the remaining uncertainty is concentrated where it belongs: the physical loop and its economics.
 
-## Funding / partners / somebody who can actually help make it exist
+## What the pilot has to prove
 
-This is ready to discuss with people who can help turn it into a real pilot: funding, wash/return operations, reusable packaging, production, logistics, buildings/cities, research or implementation.
+The next useful proof is a small, dense live loop that measures how accurately consumption predicts supply, how much food waste actually disappears, how much packaging is avoided, how reliably containers return, how many cycles they survive, what washing costs, how much labor each household requires, how dense the routes need to be and what the full loop costs against the grocery system it replaces.
 
-The useful question is not "is reusable packaging nice?" It is whether the whole loop can be made better enough than repeated retail + disposable packaging + fragmented delivery that people simply prefer it.
+A small pilot has more value than a large speculative rollout because those measurements reveal which parts of the system improve with density and which parts need redesign before scale creates anything useful.
 
-That is what I want to prove.
+The immediate work is therefore to lock the first food/container set, finish the wash-and-return operating model, make the pilot economics defensible and complete only the software required to run that real loop.
 
-## IP / verification
+The existing [pilot model](docs/PILOT_MODEL_AND_ASSUMPTIONS.md), [pilot unit economics](docs/PILOT_UNIT_ECONOMICS.md), [container system work](docs/container_material_system_spec.md), [wash and return model](docs/WASH_AND_RETURN_OPERATING_MODEL.md), [value model](docs/TOTAL_SYSTEM_VALUE_MODEL.md) and [categorized documentation](docs/README.md) exist to turn those claims into things that can be checked rather than merely asserted.
 
-The project is published under the **IPClaim APC License v1.1**. Authorship is backed by cryptographic timestamp records.
+## The project value in one line
 
-- [LICENSE.md](LICENSE.md)
-- [VERIFY.md](VERIFY.md)
+**AllDone removes grocery shopping, then removes the food waste, packaging waste, organic landfill, fossil-fuel spending and fragmented logistics that exist around that process because the process itself no longer needs to exist.**
 
-## Contact
+## IP and verification
 
-For collaboration, investment, pilots, licensing or implementation: [GitHub profile](https://github.com/aRcHmaGe333)
-
-[Support the work](https://ko-fi.com/earthcraft)
-
----
-
-**Source it, pack it, bring it, collect it, wash it, reuse it. You just use it.**
+The IP and verification material protects the value of the work by preserving a public authorship and timestamp trail under the **IPClaim APC License v1.1** through [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
