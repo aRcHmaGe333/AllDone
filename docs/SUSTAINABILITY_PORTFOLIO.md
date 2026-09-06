@@ -54,6 +54,26 @@ Current stage: **software-first prototype; physical validation still required**.
 
 The environmental angle is not "AI agriculture yay." It is much more concrete: local production where it makes sense, precise portioning, less food waste, better use of water/materials, and turning byproducts back into useful inputs instead of treating them as somebody else's problem.
 
+## The Transparency Platform (TTP)
+
+Repository: https://github.com/aRcHmaGe333/TP
+
+TTP came from another waste problem: we keep deciding what to build first and finding out what people actually wanted afterwards.
+
+One of the things that originally bothered me was seeing resources tied up in unsold cars sitting in parking lots. But the same failure is everywhere. Materials, energy, transport, labour, warehouse space and eventually disposal all get committed to things before demand is properly visible.
+
+TTP turns that around. People can publicly state what they need, want changed, want built or think is broken; find other people asking for the same thing; merge and discuss proposals; support and prioritize them; and leave a visible trail instead of sending feedback into somebody's private black hole.
+
+The original design work ended up with a **30-point value list** because the effect is much broader than market research. It touches product quality, demand discovery, resource allocation, collaborative innovation, local problem-solving, accountability, shared needs, avoiding duplicate effort, and a pile of other things that become possible once requirements are visible before somebody spends the resources.
+
+There is already a runnable FastAPI implementation with verified-identity registration, submissions, comments, merges, voting, status tracking, reporting/export and audit events, plus pilot deployment material.
+
+Current stage: **working software / pilot-oriented platform**.
+
+For sustainability, the proposition is basically: **find out what is actually needed before producing the wrong thing at scale.** If that works, the waste avoided is upstream of manufacturing rather than something we try to recycle after the mistake has already been made.
+
+TTP is also useful well outside sustainability, so I would not pretend it is a "green platform." It is an artifact I can offer wherever demand visibility, public requirements, product/service improvement, civic problem-solving or resource allocation matter.
+
 ## Universal Data Fabric (UDF)
 
 Repository: https://github.com/aRcHmaGe333/udf
@@ -94,17 +114,21 @@ HopOn attacks empty transport capacity.
 
 AFS attacks waste in food production, preparation and resource loops.
 
+TTP attacks waste before production by making actual requirements and demand visible earlier.
+
 UDF attacks duplicated storage and transfer.
 
 ECOmpile attacks repeated expensive computation where the useful part may already have become deterministic.
 
-That does not make them one company or one product. It makes them a useful portfolio to show people who fund sustainability, circular systems, transport, food, infrastructure or efficiency R&D.
+That does not make them one company or one product. It makes them a useful portfolio to show people who fund sustainability, circular systems, transport, food, infrastructure, public innovation or efficiency R&D.
 
 ## What I am actually looking for
 
 For AllDone and HopOn: money, pilot partners, operators, cities, logistics/mobility people, and anybody who can help push a real bounded test into the world.
 
 For AFS: funding plus the physical/domain expertise needed to turn software-first work into actual hardware validation.
+
+For TTP: pilot hosts, institutions, companies, cities, communities or other groups willing to expose real requirements through it and see what changes when people can state and aggregate what they actually need before decisions get made for them.
 
 For UDF and ECOmpile: R&D backing, compute/infrastructure partners and people willing to benchmark the claims properly.
 
