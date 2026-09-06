@@ -2,77 +2,79 @@
 
 **AllDone removes grocery shopping by replacing it with continuous food supply.**
 
-That one change removes much more than the trip to the supermarket. Grocery shopping is the point where a whole chain of repeated work, waste, packaging, transport and badly matched food supply gets recreated again and again. Once the food supply itself becomes continuous, most of that chain stops needing to exist.
+That change is worth much more than one less trip to the supermarket. Grocery shopping drags an entire chain behind it: planning, travel, carrying, guessed quantities, fixed pack sizes, stale food, spoiled food, plastic, cardboard, household garbage, fuel, exhaust and a retail system built around repeating the same transaction forever.
 
-## What disappears with grocery shopping
+A continuous food supply cuts into that chain at the source.
 
-The gains start with the obvious one: **the grocery trip is gone.** The time spent travelling to a store, walking aisles, queueing, carrying food home and repeating the same process every few days becomes unnecessary.
+## Grocery shopping is only the first thing removed
 
-The larger gains come from everything attached to that trip:
+The grocery trip itself disappears. So does the time spent getting to the store, walking aisles, queueing, carrying food home and doing the same thing again a few days later.
 
-- **Repeated planning disappears.** Checking the fridge, checking cupboards, remembering what ran out, making lists, estimating quantities and repairing forgotten items with emergency trips move from human attention into the supply system.
-- **Food stops being bought in guessed quantities.** Supply can follow actual consumption instead of arbitrary retail pack sizes and the household's best guess about the next week.
-- **Overbuying falls with that mismatch.** Less food enters the home merely because the available pack was too large, a future need was guessed badly, or somebody bought extra "just in case."
-- **Stale and spoiled food are designed out of the loop as far as predictable consumption allows.** Food can arrive closer to when it will actually be used instead of waiting for the next shopping cycle to justify another purchase.
-- **Avoidable food waste falls before disposal is even involved.** The useful gain is not better treatment of food after it becomes waste; it is preventing food from becoming waste in the first place.
-- **Unavoidable food remains leave the landfill stream.** The design target is for food remains to enter a dedicated compost stream instead of mixed household garbage, making complete recovery into compost part of the supply loop rather than an optional afterthought.
-- **Disposable grocery packaging disappears from the normal loop.** Reusable containers replace the plastic tubs, films, trays, bags, cardboard boxes and other one-use material attached to ordinary food retail.
-- **The upstream packaging burden disappears with it.** Less disposable plastic and cardboard have to be manufactured, printed, transported, stocked, collected and processed simply to move food through a household once.
-- **Household garbage volume drops sharply.** Two of the most persistent grocery-related waste streams — food and its packaging — are prevented or separated at the source instead of being pushed into the general waste system.
-- **Waste handling falls with that volume.** Fewer bags, bins, collections, transfers and disposal operations are needed for material the food system no longer creates.
-- **Repeated personal transport for food disappears.** Fuel, fares, parking, vehicle wear and tailpipe exhaust associated with household grocery trips stop being necessary parts of obtaining food.
-- **Food logistics become a planned recurring flow instead of millions of disconnected collection events.** Supply and return can be consolidated around actual demand instead of combining retail replenishment, household shopping trips and scattered one-off deliveries on top of one another.
-- **Fossil-fuel spending and exhaust can be removed from the remaining logistics instead of merely reduced at the edges.** A consolidated recurring route is a much smaller transport problem to electrify or otherwise operate without fossil fuel than the collection of independent trips it replaces.
-- **Physical hauling disappears from the household workload.** Carrying bags through parking lots, public transport, rain, stairs, corridors and elevators adds no value to the food itself and has no reason to remain a normal part of food supply.
-- **Emergency shopping largely disappears.** A system following consumption can react before ordinary food runs out, removing expensive and inefficient trips caused by one missing item.
-- **Retail pack-size mismatch loses its reason to dominate household quantities.** Food can be portioned according to actual use rather than shelf conventions, merchandising and fixed consumer packs.
-- **Demand becomes visible before the next purchase happens.** Consumption history gives the operator and suppliers a better picture of what will actually be needed instead of waiting for another retail transaction to reveal demand after the fact.
-- **That visibility reduces waste upstream as well.** Procurement, preparation and eventually production can track recurring real demand more closely, reducing inventory that exists mainly because nobody knew what would actually be consumed.
-- **The system improves through use.** Every completed supply cycle provides better information about quantity and timing, so the next cycle can fit reality more closely instead of resetting to another shopping guess.
-- **Dense housing becomes easier to supply.** One recurring food-supply and return loop can replace a large number of overlapping household trips, courier stops, packaging flows and waste movements around the same buildings.
-- **The value is distributed across the whole system.** Households recover time and avoid waste; suppliers gain clearer demand; buildings handle less garbage; cities absorb fewer redundant trips; waste systems move less material; the operator has a recurring service whose value comes from costs that genuinely disappeared.
+The larger savings sit around that trip:
 
-The environmental gain is therefore not a separate feature added to AllDone. It is what happens when repeated food waste, organic landfill, disposable packaging and unnecessary transport stop being structural requirements of getting food into a home.
+- **Repeated planning disappears.** Checking the fridge, checking cupboards, remembering shortages, making lists, estimating quantities and fixing forgotten items with emergency trips move out of human attention and into the supply system.
+- **Food stops being bought in guessed quantities.** Supply can follow actual consumption instead of fixed retail packs and a household guess about the next week.
+- **Overbuying falls.** Less food enters the home because the available pack was too large, the timing was wrong or somebody bought extra "just in case."
+- **Stale and spoiled food fall with it.** Food can arrive closer to the time it will actually be used instead of sitting around until the next shopping cycle.
+- **Food waste is prevented before disposal enters the picture.** The useful result is less food becoming waste in the first place.
+- **Food remains leave the landfill stream.** The design target is complete recovery of unavoidable food remains into a dedicated compost stream instead of mixed household garbage.
+- **Disposable grocery packaging leaves the normal loop.** Reusable containers replace plastic tubs, films, trays, bags, cardboard boxes and other one-use material attached to ordinary food retail.
+- **The upstream packaging burden falls with it.** Less disposable plastic and cardboard need to be manufactured, printed, transported, stocked, collected and processed simply to move food through a household once.
+- **Household garbage volume drops sharply.** Food and its packaging are two persistent waste streams; one is reduced at source and the other is designed for reuse.
+- **Waste handling shrinks with that volume.** Fewer bags, bins, collections, transfers and disposal operations are needed for material the food system no longer creates.
+- **Repeated personal transport for food disappears.** Fuel, fares, parking, vehicle wear and tailpipe exhaust tied to grocery trips stop being necessary parts of obtaining food.
+- **Food logistics become a planned recurring flow.** Supply and return can be consolidated around actual demand instead of stacking retail replenishment, household shopping trips and scattered one-off deliveries on top of one another.
+- **The remaining logistics become much easier to run without fossil fuel.** One recurring route is a smaller transport problem to electrify than thousands of independent collection trips.
+- **Physical hauling disappears from the household workload.** Carrying bags through parking lots, public transport, rain, stairs, corridors and elevators adds no value to the food itself.
+- **Emergency shopping largely disappears.** Consumption tracking can catch ordinary shortages before one missing item creates another inefficient trip.
+- **Retail pack sizes stop dictating household quantities.** Food can be portioned around actual use instead of shelf conventions, merchandising and fixed consumer packs.
+- **Demand becomes visible earlier.** Consumption history gives operators and suppliers a better picture of recurring need before another retail transaction happens.
+- **Upstream waste falls too.** Procurement, preparation and eventually production can follow recurring real demand more closely instead of carrying excess inventory because nobody knew what would actually be consumed.
+- **Every cycle improves the next one.** Timing and quantity estimates get better with use instead of resetting to another shopping guess.
+- **Dense housing becomes easier to supply.** One food-supply and return loop can replace overlapping household trips, courier stops, packaging flows and waste movements around the same buildings.
+- **The savings spread across the whole system.** Households recover time and avoid waste; suppliers gain clearer demand; buildings handle less garbage; cities absorb fewer redundant trips; waste systems move less material; the operator earns from costs that genuinely disappeared.
 
-The economic gain comes from the same removals. Money currently spent on wasted food, disposable packaging, grocery-trip fuel, duplicated handling, waste collection, emergency purchases and fragmented logistics becomes available because the corresponding work and material no longer have to be paid for.
+The environmental gain is built into the removals: less food waste, less organic landfill, less disposable packaging and less unnecessary transport.
 
-The human gain is just as direct. Time, attention and physical effort currently spent maintaining a private miniature grocery operation are returned because the food supply becomes responsible for staying supplied.
+The economic gain comes from the same place. Money currently spent on wasted food, packaging, grocery-trip fuel, duplicated handling, waste collection, emergency purchases and fragmented logistics stops being spent when the corresponding work and material stop being necessary.
 
-The strongest part is that none of this depends on turning everybody into unusually disciplined consumers. The waste falls because the system stops producing it as a normal consequence of obtaining food.
+The human gain is just as direct. Time, attention and physical effort now spent running a private miniature grocery operation are returned because the food supply takes responsibility for staying supplied.
 
-## The system that replaces grocery shopping
+None of this depends on turning everybody into unusually disciplined consumers. The system itself stops generating a large part of the waste.
 
-AllDone turns food supply into a recurring closed loop:
+## One loop replaces several bad ones
+
+AllDone runs food supply as a recurring closed loop:
 
 **measure use -> determine the next quantity -> portion/pack -> deliver -> consume -> collect -> compost food remains -> wash containers -> refill -> deliver again**
 
-Reusable glass is the current planned default for the consumer-facing food container set where it is operationally suitable. The container remains an asset of the system instead of becoming garbage after one use, so every successful return prevents another disposable package and gives the next supply cycle a container that already exists.
+Reusable glass is the current planned default for the consumer-facing food container set where it is operationally suitable. The container remains an asset of the system after the food is consumed, so every successful return prevents another disposable package and supplies the next cycle with a container that already exists.
 
-Continuous supply also changes the meaning of inventory. The useful inventory is not "how much food can be pushed into a household at once" but how little food has to be present while the household remains reliably supplied. That tighter relationship between supply and consumption is what attacks staleness, spoilage, overbuying and dead food sitting in storage.
+Continuous supply also changes household inventory. The useful target is not maximum food sitting in the home; it is the minimum amount needed to keep the home reliably supplied. That tighter fit between supply and consumption attacks staleness, spoilage, overbuying and dead food sitting in storage.
 
-The same return path closes the other half of the food loop. Containers go back for washing and reuse; unavoidable food remains go back into a compost stream. Both outputs stop being anonymous household garbage and become known material with a next use.
+The return path closes both material streams. Containers go back for washing and reuse. Unavoidable food remains go into compost. Neither has to become anonymous household garbage.
 
-## Why the comparison is much bigger than delivery
+## The economics have to include the system being replaced
 
-The relevant comparison is not AllDone versus a courier bringing one grocery order. A courier order leaves almost the entire grocery system intact and adds another delivery layer on top of it.
+Comparing AllDone with one courier bringing one grocery order misses almost the entire point. A courier order leaves the grocery system intact and adds another delivery layer.
 
-The real comparison is the full incumbent loop against the full AllDone loop.
+The useful comparison is the full grocery loop against the full AllDone loop.
 
-The incumbent loop spends money and resources on retail packaging, shelf handling, household planning, grocery trips, carrying, fixed pack sizes, overbuying, spoilage, emergency purchases, fragmented delivery, organic waste, packaging waste and repeated disposal.
+The grocery loop spends money and resources on retail packaging, shelf handling, household planning, grocery trips, carrying, fixed pack sizes, overbuying, spoilage, emergency purchases, fragmented delivery, organic waste, packaging waste and repeated disposal.
 
-AllDone introduces visible replacement costs — reusable containers, washing, inspection, refill, consolidated delivery, return logistics, compost handling, breakage reserve and the software that coordinates the loop — but those costs are paying for a system that removes the much larger collection of repeated costs around grocery shopping.
+AllDone adds its own real costs: reusable containers, washing, inspection, refill, consolidated delivery, return logistics, compost handling, breakage reserve and the software that coordinates the loop.
 
-That is why the economics have to be judged at system level. AllDone does not need to beat one isolated courier fee. It needs the full closed loop to cost less, waste less and require less human work than the full grocery-shopping system it replaces.
+Those costs only make sense against the larger collection of costs being removed. The closed loop has to cost less, waste less and require less human work than the grocery-shopping system it replaces.
 
-That also gives the project several independent sources of value rather than one narrow retail margin. The household saves time, attention, transport expense and wasted food. Suppliers gain more predictable recurring demand. Buildings and waste systems handle less material. Cities absorb fewer redundant trips. The operator can capture a sensible share of savings created across the whole loop while leaving the other participants materially better off.
+That gives the project several independent sources of value instead of one narrow retail margin. Households save time, attention, transport expense and wasted food. Suppliers gain more predictable recurring demand. Buildings and waste systems handle less material. Cities absorb fewer redundant trips. The operator can capture a share of savings created across the loop while leaving the other participants better off.
 
-## What already exists
+## Working software already exists
 
-The project already has a working early backend for household consumption profiles, quantity adjustment, schedule generation, reusable-container circulation, route/wash/billing workflows and local persistence.
+The project already has an early backend for household consumption profiles, quantity adjustment, schedule generation, reusable-container circulation, route/wash/billing workflows and local persistence.
 
-That matters because the physical system depends on exactly those coordination problems being solvable: knowing what a household normally consumes, what quantity should come next, which containers are out, which have returned, which have been washed, what has to be packed and what each route has to carry in both directions.
+That software handles the coordination the physical system depends on: normal household consumption, the next quantity to pack, containers currently out, containers returned, wash state, packing requirements and the load moving in both directions on each route.
 
-The software therefore moves AllDone past the stage where the value exists only as an idea. The remaining uncertainty is concentrated where a real pre-pilot project should have it: physical operation, measured waste removal, route density, container performance, washing, labor and full-loop economics.
+The project is therefore past the point where the value exists only on paper. The remaining uncertainty is physical and measurable: route density, container performance, washing, labor, food-waste reduction, packaging reduction and full-loop economics.
 
 Node.js 18+:
 
@@ -89,28 +91,26 @@ npm run demo:api
 
 The prototype API starts in [src/backend/index.js](src/backend/index.js).
 
-## What the first pilot is worth proving
+## The first pilot converts the case into numbers
 
-A small dense pilot can turn nearly every important part of the value case from an argument into a measurement.
+A small dense pilot can measure nearly every important claim at once: prediction accuracy, food waste removed, disposable packaging avoided, food remains recovered for compost, container return rate, container lifespan, washing cost, labor per household, route density, transport removed and full-loop cost against the grocery system it replaces.
 
-It can measure how accurately consumption predicts the next quantity, how much food waste disappears, how much disposable packaging is avoided, how much organic material is recovered for compost, how reliably containers return, how many cycles they survive, what washing costs, how much labor each household requires, how dense the routes need to be, how much transport disappears and what the full loop costs against the grocery system it replaces.
+Those measurements are more useful than a large speculative rollout. They show which gains are already real, which improve with density and which parts need redesign before scale deserves money.
 
-Those measurements are more valuable than a large speculative rollout because they show which gains are already real, which improve with density and which parts need redesign before scale deserves any money.
+The next work is correspondingly narrow: lock the first food/container set, finish the wash-and-return and compost operating model, make the pilot economics defensible, complete only the software needed to run the loop, then measure the result hard enough that the next decision rests on evidence.
 
-The immediate work is therefore narrowly valuable: lock the first food/container set, finish the wash-and-return and compost operating model, make the pilot economics defensible, complete only the software required to run the loop, and measure the removals hard enough that the next decision is based on evidence rather than optimism.
+Deeper project material:
 
-The deeper project material is organized by the question it helps answer:
+- [Categorized documentation](docs/README.md) — the full project split into manageable routes.
+- [Pilot model and assumptions](docs/PILOT_MODEL_AND_ASSUMPTIONS.md) — the first live loop and the assumptions it tests.
+- [Pilot unit economics](docs/PILOT_UNIT_ECONOMICS.md) — the replacement loop against the costs it removes.
+- [Total system value model](docs/TOTAL_SYSTEM_VALUE_MODEL.md) — the economic comparison between AllDone and the grocery loop.
+- [Container material system](docs/container_material_system_spec.md) — reusable packaging as circulating infrastructure.
+- [Wash and return operating model](docs/WASH_AND_RETURN_OPERATING_MODEL.md) — the physical return, wash and reuse operation.
+- [Architecture overview](docs/ARCHITECTURE_OVERVIEW.md) — software coordination across supply, return and operator state.
 
-- [Categorized documentation](docs/README.md) — the full project without forcing every file into one reading path.
-- [Pilot model and assumptions](docs/PILOT_MODEL_AND_ASSUMPTIONS.md) — what the first real loop is supposed to test.
-- [Pilot unit economics](docs/PILOT_UNIT_ECONOMICS.md) — whether the replacement loop can beat the costs it removes.
-- [Total system value model](docs/TOTAL_SYSTEM_VALUE_MODEL.md) — the correct economic comparison between AllDone and the incumbent grocery loop.
-- [Container material system](docs/container_material_system_spec.md) — how packaging becomes circulating infrastructure instead of recurring waste.
-- [Wash and return operating model](docs/WASH_AND_RETURN_OPERATING_MODEL.md) — how the reusable side of the loop stays physically real.
-- [Architecture overview](docs/ARCHITECTURE_OVERVIEW.md) — how the software coordinates the supply, return and operator state needed to run the loop.
-
-## The value in one sentence
+## Short version
 
 **AllDone makes grocery shopping unnecessary, then removes the food waste, stale and spoiled food, organic landfill, disposable plastic and cardboard, grocery-trip fuel spending, exhaust, carrying, planning, fragmented logistics and repeated waste handling that only existed because grocery shopping was still the way food reached the home.**
 
-The IP and verification material preserves the value of the work through a public authorship and timestamp trail under the **IPClaim APC License v1.1**: [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
+The IP and verification material preserves a public authorship and timestamp trail under the **IPClaim APC License v1.1**: [LICENSE.md](LICENSE.md) and [VERIFY.md](VERIFY.md).
