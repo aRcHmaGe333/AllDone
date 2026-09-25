@@ -1,172 +1,107 @@
 # Investor Overview
 
-## What AllDone is
+## AllDone in one sentence
 
-AllDone is a closed-loop home provisioning system for groceries, household goods, hygiene products, and similar recurring needs.
+**AllDone removes grocery shopping by making household supply continuous.**
 
-The core idea is simple:
+Recurring goods arrive according to household demand and use. Suitable goods travel in reusable containers. Empty containers come back on the recurring route, are inspected, washed, refilled and returned to circulation.
 
-- households stop doing repetitive shopping trips
-- goods arrive in reusable containers
-- containers are collected, washed, refilled, and returned to circulation
-- the system learns demand over time and reduces waste
+The household keeps control of what it wants while much of the remembering, planning, travelling, carrying, packaging disposal and quantity guesswork moves into the service.
 
-This is not just delivery. It is a packaging, return, wash, and recirculation model.
+## The problem
 
-## Why it matters
+Routine grocery shopping is a supply job performed separately by every household.
 
-The current retail model wastes:
+Someone checks stock, predicts shortages, chooses quantities, makes a list, travels, picks, carries, unloads, stores and later deals with the packaging and food that was bought in the wrong amount.
 
-- consumer time
-- transport effort
-- disposable packaging
-- food through overbuying and mismatch
-- labor in fragmented last-mile systems
+Standard grocery delivery removes some travel and carrying. It usually keeps the same fixed retail packs, disposable packaging and one-off order behaviour.
 
-AllDone is aimed at removing that chore layer rather than slightly improving the same retail loop.
+AllDone is designed around the recurring need itself.
 
-The short version is useful, but it is not enough by itself. For the fuller pitch surface, see [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md).
+## Where the value comes from
 
-## The value created
+For households, the main gains are time, attention, carrying effort, more predictable supply and a closer fit between delivered quantity and actual use.
 
-For households, AllDone provides:
+For dense buildings, recurring delivery and return can reduce fragmented trips and packaging entering shared waste streams.
 
-- time back
-- lower packaging clutter
-- less recurring shopping friction
-- more predictable supply of recurring goods
-- less direct and indirect waste spending
-- access to pooled-demand efficiency without awkward bulk buying
+For suppliers and fulfillment partners, recurring household demand can become visible earlier and packing can happen against a known route and household set.
 
-For operators and partners, AllDone provides:
+For the operator, the business case comes from combining merchandise margin and a service fee with a loop that becomes more efficient as route density, container reuse and operational learning improve.
 
-- recurring demand instead of one-off transactions
-- standardized packaging and return behavior
-- a denser and more controllable operating loop
-- a path toward infrastructure-style rather than courier-style economics
+The correct economic benchmark is the full grocery loop against the full AllDone loop. [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md) sets out that comparison.
 
-For buildings and dense residential nodes, AllDone provides:
+## The first pilot
 
-- fewer fragmented drops
-- less packaging overflow
-- a cleaner recurring service pattern
-- potential waste-system relief at building level
+The current working model is:
 
-For investors, the relevant point is that AllDone is not trying to win on "faster delivery." It is trying to replace a repeated household chore with a reusable, recurring system.
-
-The economic frame should be system-level, not courier-level. See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md).
-
-The business capture logic is also not ordinary retail markup logic. The stronger framing is shared-savings infrastructure: the household remains clearly better off, and AllDone captures a minority share of the value created by a denser closed loop.
-
-## Current repo status
-
-This repository is currently a concept, research, and prototype repo.
-
-It includes:
-
-- the business framing
-- packaging and container direction
-- early backend prototype code
-- operator-facing backend workflow scaffolding
-- public authorship and IP-claim records
-
-It does not yet represent a live business or pilot-ready operating stack.
-
-In external positioning terms, the project should currently be treated as:
-
-- publicly exposed
-- funding-ready in narrative and planning structure
-- not yet pilot-ready in operational proof
-
-See [EXTERNAL_POSITIONING.md](EXTERNAL_POSITIONING.md).
-
-## What exists in the repo today
-
-- a clear system concept and naming decision
-- a glass-first packaging direction
-- container family and material guidance
-- a narrow backend prototype that demonstrates demand-learning and circulation logic
-- a second backend prototype surface for operator workflows
-- a planning-level pilot economics model
-- a public IP-claim and timestamp-verification trail
-
-For a quick structural view, see [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md).
-
-## Current strategic decisions
-
-- The public-facing project name is `AllDone`.
-- Reusable glass is the default planned container standard.
-- The first viable pilot should stay narrow in SKU count, geography, and operating model.
-- The first business proof should come from one dense recurring loop, not from broad geographic expansion.
-
-## What still needs to be proven
-
-- breakage and handling economics for glass in the target loop
-- wash and return operating costs
-- pilot unit economics
-- first customer environment and product scope
-- software needed for actual loop execution
-
-## Proposed pilot model
-
-The default recommended first pilot is:
-
-- one dense residential cluster
+- one apartment-block cluster or housing cooperative
 - about 60 active households
-- weekly recurring replenishment
+- weekly replenishment
 - 8-15 staple SKUs
-- deposit-backed glass container returns
+- `Storage-M` and `Dose-M` reusable container formats
+- deposit-backed returns
+- one centralized wash point
 
-See [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md) for the concrete working model.
-See [PILOT_UNIT_ECONOMICS.md](PILOT_UNIT_ECONOMICS.md) for the planning economics layer.
+The pilot is deliberately narrow. It exists to measure return behaviour, wash cost, breakage and loss, route time, labour per household, repeat use, food waste avoided, packaging avoided and contribution before central overhead.
 
-## What capital should fund
+The planning model uses a EUR 55 weekly basket, a EUR 5 weekly service fee and four container turns per household. Those figures are working assumptions until live operation replaces them with measured values.
 
-Capital should fund proof of the loop:
+See [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md) and [PILOT_UNIT_ECONOMICS.md](PILOT_UNIT_ECONOMICS.md).
 
-- container fleet
-- wash and return operations
-- operator-facing software
-- pilot launch reserve
+## What already exists
 
-The priority is proving repeatable operations and repeatable user value, not scaling brand spend before the loop is validated.
+The repository already contains:
 
-That proof should be judged against the full incumbent cost stack AllDone replaces, not against the marginal economics of an ordinary last-mile drop.
+- the system and pilot design
+- container material and family specifications
+- return, wash, inspection, breakage and gasket policies
+- a regulatory and food-safety checklist for pilot planning
+- an assumption-based unit-economics model
+- a Node.js/Express prototype for household, pack, route, return, wash and billing workflows
+- earlier consumption-learning and quantity-adjustment logic
+- local file-backed persistence for prototype continuity
+- a public authorship and timestamp-verification trail
 
-## Immediate priorities
+The backend is useful enough to demonstrate the operating sequence and still needs pilot hardening, especially around persistence, operator interfaces and payment/deposit handling.
 
-1. Finalize the first pilot container set.
-2. Define the wash and return operating model.
-3. Build a defendable pilot economics model.
-4. Implement the software required to run the loop, not just optimize it.
+## Current stage
 
-## What this repo should signal publicly
+AllDone is public, documented, prototype-backed and ready for serious early funding conversations about the next proof stage.
 
-The right public interpretation is:
+The operation has not yet been demonstrated in a live pilot. Supplier quotes, physical samples, measured wash and breakage data, a pilot site, recruited households, local compliance clearance and live retention and route data remain to be produced.
 
-- serious concept and systems thinking
-- real packaging and operating-model research
-- honest prototype status
-- clear next steps toward pilot readiness
+That distinction matters: funding would pay to create the evidence, rather than finance a claim that the evidence already exists.
 
-The wrong interpretation would be that the business is already launch-ready. The repository should continue to avoid implying that.
+## What early funding buys
+
+The current planning range is EUR 250,000-500,000, with EUR 350,000 used as the main 12-18 month case.
+
+That capital is intended to fund:
+
+- the first real container fleet and handling equipment
+- wash-and-return operations
+- software hardening and simple driver/depot interfaces
+- legal and compliance work
+- pilot labour and working capital
+- enough runway to collect meaningful operating data
+
+The separate narrow pilot model puts the initial physical hard-cost range at roughly EUR 31,000-98,000 before founder labour or a major facility build-out.
+
+## What creates an advantage
+
+Today the advantage is the integrated design: demand, quantities, containers, delivery, returns, washing and software have been designed as parts of one operating loop.
+
+A live pilot can turn that design into practical knowledge about container lifespan, closure failures, wash cost, packing accuracy, return behaviour, route density, building access, household changes and the exceptions the software must handle.
+
+That operating knowledge is more difficult to reproduce than a customer-facing screen.
 
 ## Reading path
 
-- [README.md](../README.md)
-- [EXTERNAL_POSITIONING.md](EXTERNAL_POSITIONING.md)
-- [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md)
-- [VALUE_PROPOSITION.md](VALUE_PROPOSITION.md)
-- [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md)
-- [PILOT_MODEL_AND_ASSUMPTIONS.md](PILOT_MODEL_AND_ASSUMPTIONS.md)
-- [PILOT_UNIT_ECONOMICS.md](PILOT_UNIT_ECONOMICS.md)
-- [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md)
-- [FUNDRAISING_READINESS.md](FUNDRAISING_READINESS.md)
-- [PROBLEM_AND_ALTERNATIVES.md](PROBLEM_AND_ALTERNATIVES.md)
-- [WHY_NOW_AND_UNFAIR_ADVANTAGE.md](WHY_NOW_AND_UNFAIR_ADVANTAGE.md)
-- [THREE_RISKS.md](THREE_RISKS.md)
-- [RAISE_PLAN.md](RAISE_PLAN.md)
-- [INVESTOR_DATA_ROOM_INDEX.md](INVESTOR_DATA_ROOM_INDEX.md)
-- [TASKS.md](TASKS.md)
-- [packaging_guidance.md](packaging_guidance.md)
-- [container_material_system_spec.md](container_material_system_spec.md)
+- [README](../README.md)
+- [Value proposition](VALUE_PROPOSITION.md)
+- [Pilot brief](PILOT_BRIEF.md)
+- [Pilot economics](PILOT_UNIT_ECONOMICS.md)
+- [Architecture overview](ARCHITECTURE_OVERVIEW.md)
+- [Why now and advantage](WHY_NOW_AND_UNFAIR_ADVANTAGE.md)
+- [Three risks](THREE_RISKS.md)
+- [Raise plan](RAISE_PLAN.md)
