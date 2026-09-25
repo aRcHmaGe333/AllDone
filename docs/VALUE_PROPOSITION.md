@@ -2,105 +2,83 @@
 
 Status: active
 
-This document states what AllDone gives people, why that matters, and what must exist for the value to be real.
+AllDone gives people back the part of their week that disappears into keeping a home supplied.
 
-For a fuller pitch-oriented expansion of the short value bullets, see [VALUE_ANGLE_BREAKDOWN.md](VALUE_ANGLE_BREAKDOWN.md).
+The visible chore is shopping. Around it sits a quieter supply chain: checking stock, remembering shortages, estimating quantities, travelling, picking, carrying, unloading, storing, correcting mistakes and disposing of what the trip leaves behind.
 
-## Core promise
+AllDone moves recurring replenishment into a managed loop. The household chooses what it wants; the service keeps track of the recurring requirement, prepares the next useful quantity, delivers it and takes the empty reusable containers back for washing and reuse.
 
-AllDone removes the household shopping chore for recurring needs.
+**We source it, portion it, pack it, bring it, collect it, wash it and reuse it. You use it.**
 
-The value is not "faster delivery." The value is:
+## Time and attention
 
-- the home stays supplied
-- packaging does not pile up
-- the user does not keep re-planning the same purchases
-- empties leave the home and return to circulation
+Routine grocery shopping consumes travel time, store time, queueing time and carrying time.
 
-In simple terms:
+It also creates interruptions. Something runs out. The next trip has to be remembered. One forgotten item can create another trip.
 
-**we source it, pack it, bring it, collect it, wash it, and reuse it**
+Consumption history gives the service a record of what is actually being used. The household no longer has to repeatedly rediscover the same basic requirements.
 
-## What AllDone gives households
+## Physical effort
 
-- less time spent shopping, restocking, and carrying goods
-- less mental overhead from remembering the same recurring purchases
-- fewer disposable packages entering the home
-- more predictable household supply
-- lower mismatch between what is bought and what is actually used
-- less clutter from half-used, badly sized, or duplicate purchases
+The grocery system often makes the customer its final freight handler.
 
-The user benefit is convenience with less waste, not convenience with more packaging.
+People carry concentrated loads through parking lots, streets, transit, lifts and stairs because the supply chain stops short of the home.
 
-The correct economic comparison is not "delivery versus delivery." It is "wasteful fragmented retail behavior versus a closed-loop replacement model." See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md).
+AllDone completes that physical job as part of the recurring service.
 
-## What AllDone gives buildings and dense residential environments
+## Quantity and food waste
 
-- fewer fragmented shopping trips
-- fewer one-off parcel drops for routine consumables
-- more consolidated delivery and pickup windows
-- less packaging overflow in shared waste streams
-- a cleaner operating pattern for recurring supply
+Retail pack sizes are built for shelves. Household consumption has its own rhythm.
 
-## What AllDone gives suppliers and fulfillment partners
+A recurring service can use actual consumption to adjust the next quantity. Better quantity and timing can reduce overbuying, stale stock, spoilage, duplicate purchases and shortages.
 
-- more predictable recurring demand
-- clearer packaging standards
-- tighter link between packed quantity and real household usage
-- the possibility of reduced disposable-packaging spend over time
+The current software includes early consumption-profile and quantity-adjustment logic. The first pilot will test how much value this creates in practice.
 
-## What AllDone gives cities and infrastructure
+## Packaging
 
-- fewer duplicated retail trips for routine goods
-- less single-use packaging in circulation
-- a better fit for dense neighborhoods where repeated shopping behavior is inefficient
+Reusable containers turn packaging from a one-use material into circulating equipment.
 
-## What AllDone gives investors and partners
+For households, that means less disposable packaging entering the home and less rubbish leaving it. For the operator, container lifespan, return behaviour, wash cost, gasket replacement, breakage and loss become measurable operating variables.
 
-- a recurring-use service rather than one-off transactions
-- a system with packaging, return, wash, and routing discipline
-- a potentially sticky household behavior once the loop works reliably
-- a defensible operating model that is harder to copy than a thin delivery app
+The pilot uses a glass-first material direction with stainless steel and silicone in the closure path. Physical testing will determine whether that choice survives real handling and wash economics.
 
-The strength of the concept is the full loop. The moat is not an app screen by itself.
+## Buildings and dense residential environments
 
-## What must exist for the value to be real
+Density makes recurring supply easier to operate.
 
-### Physical system
+A single route through an apartment block or housing cooperative can serve many households with short distances between stops and collect empty containers at the same time.
 
-- a standardized container set
-- a return method that people actually comply with
-- a wash and inspection process that is safe and repeatable
-- a fulfillment method that packs the right quantities reliably
+That can reduce fragmented delivery traffic and packaging entering shared waste streams.
 
-### Operating model
+## Suppliers and fulfillment partners
 
-- a narrow initial product scope
-- a dense enough pilot environment
-- a practical deposit or return policy
-- handling rules for loss, breakage, and damaged containers
+Recurring household use gives procurement and packing a clearer view of what is likely to be needed.
 
-### Software
+Stable demand can be prepared earlier, while changes in actual use adjust future cycles.
 
-- household and subscription records
-- pack planning
-- route and stop execution
-- container lifecycle tracking
-- wash and return tracking
-- billing and exception handling
+## Operator and investor value
 
-## What AllDone is not trying to be
+The business model combines merchandise margin and a weekly service fee, with a refundable deposit supporting container returns.
 
-- not another disposable last-mile app
-- not a broad marketplace of arbitrary goods
-- not a pilot-ready business before the return-and-reuse loop is proven
+The larger economic opportunity comes from costs the loop can remove or reduce: household shopping work, transport, food mismatch, disposable packaging, fragmented delivery and repeated waste handling.
 
-## Public framing
+AllDone only needs to capture enough of that improvement to run and grow the service while leaving the household clearly better off.
 
-The correct public claim is:
+See [TOTAL_SYSTEM_VALUE_MODEL.md](TOTAL_SYSTEM_VALUE_MODEL.md) for the broader comparison.
 
-AllDone is a closed-loop home provisioning system designed to replace repetitive shopping for recurring needs with reusable containers, return logistics, industrial washing, and recirculation.
+## What has to work
 
-The correct public promise is:
+The value proposition depends on a real physical loop:
 
-We give people time back, reduce disposable packaging, and keep homes supplied with less friction and less waste.
+- containers that survive repeated use
+- simple returns with high compliance
+- safe, repeatable washing and inspection
+- reliable packing and route execution
+- software that follows the container and household state
+- economics that remain positive after wash, transport, breakage and labour are counted
+
+The first pilot exists to measure those conditions rather than assume them.
+
+## Current public promise
+
+**AllDone keeps the home supplied with recurring goods while taking over much of the shopping, carrying, packaging and replenishment work households currently repeat by hand.**
