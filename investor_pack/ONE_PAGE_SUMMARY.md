@@ -1,73 +1,54 @@
 # AllDone One-Page Summary
 
-## What AllDone is
+**AllDone removes grocery shopping by making household supply continuous.**
 
-AllDone is a closed-loop home provisioning system for recurring household goods.
+Routine grocery shopping is a supply job carried out separately by every household. Someone checks stock, predicts shortages, chooses quantities, travels, picks, carries, unloads, stores and deals with the packaging and waste.
 
-Instead of repeated shopping trips and disposable packaging, AllDone uses reusable containers, scheduled delivery, return pickup, centralized washing, and recirculation.
+AllDone moves that repetition into one managed loop.
 
-## What value it provides
-
-- gives households time back
-- reduces disposable packaging
-- keeps homes supplied with less friction
-- aligns delivered quantity more closely with real use
-- reduces waste-related spending that households usually do not even name as spending
-- can improve building-level waste and delivery conditions in dense nodes
+Recurring goods arrive according to household demand and use. Suitable goods travel in reusable containers. Empty containers are collected on the recurring route, washed, inspected, refilled and returned to circulation. The household keeps control of what it wants while much of the remembering, carrying, packaging disposal and quantity guesswork moves into the service.
 
 ## Why it matters
 
-The current retail loop still wastes:
+The value is spread across several parts of the present grocery loop:
 
-- consumer time
-- packaging
-- transport effort
-- food through mismatch and overbuying
-- labor through fragmented last-mile behavior
+- household time and attention
+- personal transport and carrying
+- food mismatch and spoilage
+- disposable packaging
+- fragmented delivery and waste handling
+- limited visibility of recurring demand
 
-AllDone is aimed at removing the recurring shopping chore rather than slightly optimizing the same disposable model.
+The economic comparison is the full grocery loop against the full AllDone loop.
 
-The right comparison is not courier versus courier.
+## First pilot
 
-The right comparison is the full incumbent stack versus a standardized closed-loop replacement.
-
-## Pilot shape
-
-The default first pilot is:
+The current plan is:
 
 - one dense residential cluster
 - about 60 active households
-- weekly recurring replenishment
+- weekly replenishment
 - 8-15 staple SKUs
-- glass-first reusable containers
+- `Storage-M` and `Dose-M` reusable container formats
 - deposit-backed returns
-- centralized wash model
+- centralized washing
+
+The pilot will measure return behaviour, wash cost, breakage and loss, route time, labour per household, repeat use, food waste avoided, packaging avoided and early contribution economics.
 
 ## What already exists
 
-- public concept and system docs
-- packaging and container specifications
-- pilot brief and planning economics
-- operator-facing backend prototype
-- public IPClaim publication and timestamp framework
-
-## What funding should prove
-
-- real return behavior
-- real wash costs
-- real breakage rates
-- route density and stop efficiency
-- early contribution logic
-- repeat household usage
-
-## Value capture logic
-
-AllDone should leave the household clearly better off and capture only part of the savings created by the loop.
-
-That makes it closer to shared-savings infrastructure than to a thin delivery-margin business.
+The public repository contains the system design, packaging and container specifications, return and wash operating work, pilot planning, an assumption-based economics model, a working operator-flow backend prototype and a public timestamped authorship record.
 
 ## Current stage
 
-AllDone is publicly exposed and funding-ready in narrative structure.
+AllDone is public, documented and prototype-backed. It is ready for serious early funding conversations about the next proof stage and remains pre-pilot.
 
-It is not yet pilot-proven.
+The missing evidence is physical and operational: supplier quotes, samples, wash and breakage measurements, a real site, recruited households, compliance clearance and live retention, return, route and contribution data.
+
+## What funding buys
+
+The current planning range is EUR 250,000-500,000, with EUR 350,000 used as the main 12-18 month case.
+
+The money is intended to fund the container fleet, wash-and-return operation, software hardening, operator interfaces, compliance work, pilot labour and enough runway to collect meaningful measurements.
+
+If the measurements work, AllDone becomes a repeatable household supply service whose economics can improve with density, container reuse and better demand information.
