@@ -14,6 +14,7 @@ class AllDoneOperationsService {
       generatedPackPlans: 0,
       generatedRoutes: 0,
       processedReturns: 0,
+      returnScans: 0,
       washBatchesCompleted: 0,
       billingEventsRecorded: 0
     };
@@ -21,9 +22,7 @@ class AllDoneOperationsService {
   }
 
   seedDemoData() {
-    if (this.households.size > 0) {
-      return;
-    }
+    if (this.households.size > 0) return;
 
     const householdA = this.createHousehold({
       householdId: 'hh_001',
@@ -73,28 +72,14 @@ class AllDoneOperationsService {
       ]
     });
 
-    this.recordBillingEvent({
-      householdId: householdA.householdId,
-      type: 'deposit_collected',
-      amount: 40,
-      notes: 'Initial pilot deposit'
-    });
-
-    this.recordBillingEvent({
-      householdId: householdB.householdId,
-      type: 'deposit_collected',
-      amount: 40,
-      notes: 'Initial pilot deposit'
-    });
-
+    this.recordBillingEvent({ householdId: householdA.householdId, type: 'deposit_collected', amount: 40, notes: 'Initial pilot deposit' });
+    this.recordBillingEvent({ householdId: householdB.householdId, type: 'deposit_collected', amount: 40, notes: 'Initial pilot deposit' });
     this.persistState();
   }
 
   createHousehold(data = {}) {
     const householdId = data.householdId || this.buildId('hh');
-    if (this.households.has(householdId)) {
-      throw new Error(`Household ${householdId} already exists`);
-    }
+    if (this.households.has(householdId)) throw new Error(`Household ${householdId} already exists`);
 
     const household = {
       householdId,
@@ -113,28 +98,18 @@ class AllDoneOperationsService {
     this.households.set(householdId, household);
     this.ensureBillingAccount(householdId);
     this.persistState();
-
     return household;
   }
 
-  listHouseholds() {
-    return Array.from(this.households.values());
-  }
-
-  getHousehold(householdId) {
-    return this.households.get(householdId);
-  }
+  listHouseholds() { return Array.from(this.households.values()); }
+  getHousehold(householdId) { return this.households.get(householdId); }
 
   createSubscription(data = {}) {
     const household = this.getHousehold(data.householdId);
-    if (!household) {
-      throw new Error(`Household ${data.householdId} not found`);
-    }
+    if (!household) throw new Error(`Household ${data.householdId} not found`);
 
     const subscriptionId = data.subscriptionId || this.buildId('sub');
-    if (this.subscriptions.has(subscriptionId)) {
-      throw new Error(`Subscription ${subscriptionId} already exists`);
-    }
+    if (this.subscriptions.has(subscriptionId)) throw new Error(`Subscription ${subscriptionId} already exists`);
 
     const subscription = {
       subscriptionId,
@@ -159,52 +134,44 @@ class AllDoneOperationsService {
     this.subscriptions.set(subscriptionId, subscription);
     this.ensureBillingAccount(subscription.householdId);
     this.persistState();
-
     return subscription;
   }
 
-  listSubscriptions() {
-    return Array.from(this.subscriptions.values());
-  }
-
-  getSubscription(subscriptionId) {
-    return this.subscriptions.get(subscriptionId);
-  }
+  listSubscriptions() { return Array.from(this.subscriptions.values()); }
+  getSubscription(subscriptionId) { return this.subscriptions.get(subscriptionId); }
 
   generatePackPlan(targetDateInput) {
     const targetDate = this.normalizeDate(targetDateInput);
     const packPlanId = this.buildId('pack');
     const items = [];
 
-    this.listSubscriptions()
-      .filter(subscription => subscription.status === 'active')
-      .forEach(subscription => {
-        const household = this.getHousehold(subscription.householdId);
-        subscription.planItems.forEach(planItem => {
-          for (let count = 0; count < planItem.quantity; count += 1) {
-            const container = this.createContainer({
-              containerType: planItem.unit,
-              householdId: household.householdId,
-              assignedDate: targetDate,
-              currentState: 'assigned'
-            });
+    this.listSubscriptions().filter(subscription => subscription.status === 'active').forEach(subscription => {
+      const household = this.getHousehold(subscription.householdId);
+      subscription.planItems.forEach(planItem => {
+        for (let count = 0; count < planItem.quantity; count += 1) {
+          const container = this.createContainer({
+            containerType: planItem.unit,
+            householdId: household.householdId,
+            assignedDate: targetDate,
+            currentState: 'assigned'
+          });
 
-            items.push({
-              packItemId: this.buildId('pack_item'),
-              householdId: household.householdId,
-              householdName: household.name,
-              subscriptionId: subscription.subscriptionId,
-              sku: planItem.sku,
-              description: planItem.description,
-              containerSku: planItem.unit,
-              containerId: container.containerId,
-              category: planItem.category,
-              quantity: 1,
-              fulfillmentState: 'planned'
-            });
-          }
-        });
+          items.push({
+            packItemId: this.buildId('pack_item'),
+            householdId: household.householdId,
+            householdName: household.name,
+            subscriptionId: subscription.subscriptionId,
+            sku: planItem.sku,
+            description: planItem.description,
+            containerSku: planItem.unit,
+            containerId: container.containerId,
+            category: planItem.category,
+            quantity: 1,
+            fulfillmentState: 'planned'
+          });
+        }
       });
+    });
 
     const packPlan = {
       packPlanId,
@@ -218,24 +185,16 @@ class AllDoneOperationsService {
     this.packPlans.set(packPlanId, packPlan);
     this.metrics.generatedPackPlans += 1;
     this.persistState();
-
     return packPlan;
   }
 
-  getPackPlan(packPlanId) {
-    return this.packPlans.get(packPlanId);
-  }
-
-  listPackPlans() {
-    return Array.from(this.packPlans.values());
-  }
+  getPackPlan(packPlanId) { return this.packPlans.get(packPlanId); }
+  listPackPlans() { return Array.from(this.packPlans.values()); }
 
   generateRouteManifest(targetDateInput, options = {}) {
     const targetDate = this.normalizeDate(targetDateInput);
     const packPlan = options.packPlanId ? this.getPackPlan(options.packPlanId) : this.findPackPlanByDate(targetDate);
-    if (!packPlan) {
-      throw new Error(`No pack plan found for ${targetDate}`);
-    }
+    if (!packPlan) throw new Error(`No pack plan found for ${targetDate}`);
 
     const groupedStops = new Map();
     packPlan.items.forEach(item => {
@@ -248,11 +207,11 @@ class AllDoneOperationsService {
           address: household.address,
           deliveryWindow: '08:00-12:00',
           items: [],
-          expectedReturns: 0,
+          expectedReturns: this.listContainers({ householdId: household.householdId })
+            .filter(container => container.currentState === 'with_household').length,
           status: 'planned'
         });
       }
-
       groupedStops.get(item.householdId).items.push(item);
     });
 
@@ -262,49 +221,52 @@ class AllDoneOperationsService {
       targetDate,
       packPlanId: packPlan.packPlanId,
       generatedAt: new Date(),
-      stops: stops.map((stop, index) => ({
-        ...stop,
-        stopOrder: index + 1
-      })),
+      stops: stops.map((stop, index) => ({ ...stop, stopOrder: index + 1 })),
       status: 'planned'
     };
 
     this.routes.set(route.routeId, route);
     this.metrics.generatedRoutes += 1;
     this.persistState();
-
     return route;
   }
 
-  listRoutes() {
-    return Array.from(this.routes.values());
-  }
-
-  getRoute(routeId) {
-    return this.routes.get(routeId);
-  }
+  listRoutes() { return Array.from(this.routes.values()); }
+  getRoute(routeId) { return this.routes.get(routeId); }
 
   completeRouteStop(routeId, stopId, data = {}) {
     const route = this.getRoute(routeId);
-    if (!route) {
-      throw new Error(`Route ${routeId} not found`);
-    }
+    if (!route) throw new Error(`Route ${routeId} not found`);
 
     const stop = route.stops.find(candidate => candidate.stopId === stopId);
-    if (!stop) {
-      throw new Error(`Stop ${stopId} not found`);
-    }
+    if (!stop) throw new Error(`Stop ${stopId} not found`);
 
     stop.status = data.status || 'completed';
     stop.completedAt = new Date();
     stop.returnedContainerIds = data.returnedContainerIds || [];
     stop.notes = data.notes || '';
-    this.persistState();
 
-    return {
-      routeId,
-      stop
-    };
+    stop.items.forEach(item => {
+      const container = this.getContainer(item.containerId);
+      if (container) {
+        container.currentState = 'with_household';
+        container.currentLocation = 'household';
+        container.householdId = stop.householdId;
+        container.deliveredAt = new Date();
+        container.updatedAt = new Date();
+      }
+    });
+
+    if (stop.returnedContainerIds.length > 0) {
+      this.processReturnedContainers({
+        returnedContainerIds: stop.returnedContainerIds,
+        householdId: stop.householdId,
+        routeId
+      });
+    }
+
+    this.persistState();
+    return { routeId, stop };
   }
 
   createContainer(data = {}) {
@@ -319,6 +281,7 @@ class AllDoneOperationsService {
       condition: data.condition || 'good',
       currentLocation: data.currentLocation || 'depot',
       lastWashBatchId: data.lastWashBatchId || null,
+      lastReturn: data.lastReturn || null,
       createdAt: new Date(),
       updatedAt: new Date()
     };
@@ -330,63 +293,76 @@ class AllDoneOperationsService {
 
   listContainers(filters = {}) {
     return Array.from(this.containers.values()).filter(container => {
-      if (filters.state && container.currentState !== filters.state) {
-        return false;
-      }
-
-      if (filters.householdId && container.householdId !== filters.householdId) {
-        return false;
-      }
-
+      if (filters.state && container.currentState !== filters.state) return false;
+      if (filters.householdId && container.householdId !== filters.householdId) return false;
       return true;
     });
   }
 
-  getContainer(containerId) {
-    return this.containers.get(containerId);
+  getContainer(containerId) { return this.containers.get(containerId); }
+
+  scanReturnedContainer(data = {}) {
+    const containerId = data.containerId;
+    if (!containerId) throw new Error('containerId is required');
+
+    const container = this.getContainer(containerId);
+    if (!container) throw new Error(`Container ${containerId} not found`);
+
+    const previousHouseholdId = container.householdId || data.householdId || null;
+    const returnedAt = new Date();
+
+    container.currentState = 'returned_dirty';
+    container.currentLocation = 'dirty_intake';
+    container.returnedAt = returnedAt;
+    container.condition = data.condition || container.condition || 'good';
+    container.lastReturn = {
+      householdId: previousHouseholdId,
+      routeId: data.routeId || null,
+      scannedAt: returnedAt,
+      notes: data.notes || ''
+    };
+    container.updatedAt = returnedAt;
+
+    this.metrics.processedReturns += 1;
+    this.metrics.returnScans = (this.metrics.returnScans || 0) + 1;
+    this.persistState();
+
+    return {
+      container,
+      returnReceipt: {
+        containerId,
+        householdId: previousHouseholdId,
+        routeId: data.routeId || null,
+        returnedAt
+      }
+    };
   }
 
   processReturnedContainers(data = {}) {
     const returnedContainerIds = data.returnedContainerIds || [];
-    if (returnedContainerIds.length === 0) {
-      throw new Error('returnedContainerIds is required');
-    }
+    if (returnedContainerIds.length === 0) throw new Error('returnedContainerIds is required');
 
-    const processed = returnedContainerIds.map(containerId => {
-      const container = this.getContainer(containerId);
-      if (!container) {
-        throw new Error(`Container ${containerId} not found`);
-      }
+    const processed = returnedContainerIds.map(containerId => this.scanReturnedContainer({
+      containerId,
+      householdId: data.householdId,
+      routeId: data.routeId,
+      condition: data.condition,
+      notes: data.notes
+    }).container);
 
-      container.currentState = 'returned_dirty';
-      container.currentLocation = 'dirty_intake';
-      container.returnedAt = new Date();
-      container.condition = data.condition || container.condition || 'good';
-      container.updatedAt = new Date();
-
-      return container;
-    });
-
-    this.metrics.processedReturns += processed.length;
-    this.persistState();
-
-    return {
-      processedCount: processed.length,
-      containers: processed
-    };
+    return { processedCount: processed.length, containers: processed };
   }
 
   createWashBatch(data = {}) {
     const containerIds = data.containerIds || [];
-    if (containerIds.length === 0) {
-      throw new Error('containerIds is required');
-    }
+    if (containerIds.length === 0) throw new Error('containerIds is required');
 
     const washBatchId = this.buildId('wash');
     const containers = containerIds.map(containerId => {
       const container = this.getContainer(containerId);
-      if (!container) {
-        throw new Error(`Container ${containerId} not found`);
+      if (!container) throw new Error(`Container ${containerId} not found`);
+      if (container.currentState !== 'returned_dirty') {
+        throw new Error(`Container ${containerId} must be returned_dirty before washing`);
       }
 
       container.currentState = 'washing';
@@ -406,18 +382,12 @@ class AllDoneOperationsService {
 
     this.washBatches.set(washBatchId, washBatch);
     this.persistState();
-
-    return {
-      washBatch,
-      containers
-    };
+    return { washBatch, containers };
   }
 
   inspectWashBatch(washBatchId, data = {}) {
     const washBatch = this.washBatches.get(washBatchId);
-    if (!washBatch) {
-      throw new Error(`Wash batch ${washBatchId} not found`);
-    }
+    if (!washBatch) throw new Error(`Wash batch ${washBatchId} not found`);
 
     washBatch.status = 'inspection';
     washBatch.inspectedAt = new Date();
@@ -426,9 +396,7 @@ class AllDoneOperationsService {
 
     washBatch.containerIds.forEach(containerId => {
       const container = this.getContainer(containerId);
-      if (!container) {
-        return;
-      }
+      if (!container) return;
 
       if (washBatch.failedContainerIds.includes(containerId)) {
         container.currentState = 'damaged_hold';
@@ -437,29 +405,23 @@ class AllDoneOperationsService {
         container.currentState = 'inspection_hold';
         container.currentLocation = 'clean_inspection';
       }
-
       container.updatedAt = new Date();
     });
 
     this.persistState();
-
     return washBatch;
   }
 
   releaseWashBatch(washBatchId) {
     const washBatch = this.washBatches.get(washBatchId);
-    if (!washBatch) {
-      throw new Error(`Wash batch ${washBatchId} not found`);
-    }
+    if (!washBatch) throw new Error(`Wash batch ${washBatchId} not found`);
 
     washBatch.status = 'completed';
     washBatch.completedAt = new Date();
 
     washBatch.containerIds.forEach(containerId => {
       const container = this.getContainer(containerId);
-      if (!container || container.currentState === 'damaged_hold') {
-        return;
-      }
+      if (!container || container.currentState === 'damaged_hold') return;
 
       container.currentState = 'ready_to_refill';
       container.currentLocation = 'clean_inventory';
@@ -474,20 +436,12 @@ class AllDoneOperationsService {
     return washBatch;
   }
 
-  listWashBatches() {
-    return Array.from(this.washBatches.values());
-  }
+  listWashBatches() { return Array.from(this.washBatches.values()); }
 
   ensureBillingAccount(householdId) {
     if (!this.billingAccounts.has(householdId)) {
-      this.billingAccounts.set(householdId, {
-        householdId,
-        balance: 0,
-        depositBalance: 0,
-        events: []
-      });
+      this.billingAccounts.set(householdId, { householdId, balance: 0, depositBalance: 0, events: [] });
     }
-
     return this.billingAccounts.get(householdId);
   }
 
@@ -501,30 +455,20 @@ class AllDoneOperationsService {
       createdAt: new Date()
     };
 
-    if (event.type.includes('deposit')) {
-      account.depositBalance += event.amount;
-    } else {
-      account.balance += event.amount;
-    }
+    if (event.type.includes('deposit')) account.depositBalance += event.amount;
+    else account.balance += event.amount;
 
     account.events.push(event);
     this.metrics.billingEventsRecorded += 1;
     this.persistState();
-
-    return {
-      account,
-      event
-    };
+    return { account, event };
   }
 
-  listBillingAccounts() {
-    return Array.from(this.billingAccounts.values());
-  }
+  listBillingAccounts() { return Array.from(this.billingAccounts.values()); }
 
   getOperationsDashboard() {
     const activeSubscriptions = this.listSubscriptions().filter(subscription => subscription.status === 'active').length;
     const containerStates = {};
-
     this.listContainers().forEach(container => {
       containerStates[container.currentState] = (containerStates[container.currentState] || 0) + 1;
     });
@@ -541,16 +485,11 @@ class AllDoneOperationsService {
     };
   }
 
-  buildId(prefix) {
-    return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
-  }
+  buildId(prefix) { return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`; }
 
   normalizeDate(value) {
     const date = value ? new Date(value) : new Date();
-    if (Number.isNaN(date.getTime())) {
-      throw new Error('Invalid date');
-    }
-
+    if (Number.isNaN(date.getTime())) throw new Error('Invalid date');
     return date.toISOString().slice(0, 10);
   }
 
@@ -568,9 +507,7 @@ class AllDoneOperationsService {
 
   loadState() {
     const state = this.store.load(null);
-    if (!state) {
-      return;
-    }
+    if (!state) return;
 
     this.households = new Map((state.households || []).map(item => [item.householdId, this.reviveRecord(item)]));
     this.subscriptions = new Map((state.subscriptions || []).map(item => [item.subscriptionId, this.reviveRecord(item)]));
@@ -579,11 +516,12 @@ class AllDoneOperationsService {
     this.routes = new Map((state.routes || []).map(item => [item.routeId, this.reviveRecord(item)]));
     this.washBatches = new Map((state.washBatches || []).map(item => [item.washBatchId, this.reviveRecord(item)]));
     this.billingAccounts = new Map((state.billingAccounts || []).map(item => [item.householdId, this.reviveRecord(item)]));
-    this.metrics = state.metrics || this.metrics;
+    this.metrics = { ...this.metrics, ...(state.metrics || {}) };
   }
 
   persistState() {
     this.store.save({
+      schemaVersion: 1,
       households: this.listHouseholds(),
       subscriptions: this.listSubscriptions(),
       containers: this.listContainers(),
@@ -596,23 +534,14 @@ class AllDoneOperationsService {
   }
 
   reviveRecord(record) {
-    if (Array.isArray(record)) {
-      return record.map(item => this.reviveRecord(item));
-    }
-
-    if (!record || typeof record !== 'object') {
-      return record;
-    }
+    if (Array.isArray(record)) return record.map(item => this.reviveRecord(item));
+    if (!record || typeof record !== 'object') return record;
 
     const revived = {};
     Object.entries(record).forEach(([key, value]) => {
-      if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(value)) {
-        revived[key] = new Date(value);
-      } else {
-        revived[key] = this.reviveRecord(value);
-      }
+      if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(value)) revived[key] = new Date(value);
+      else revived[key] = this.reviveRecord(value);
     });
-
     return revived;
   }
 }
