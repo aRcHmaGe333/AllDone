@@ -1,75 +1,93 @@
 # Deck Outline
 
-## 1. Company Purpose
+## 1. The outcome
 
-AllDone replaces repetitive household shopping for recurring goods with a closed-loop provisioning system built on reusable containers, return logistics, industrial washing, and recirculation.
+**The home stays supplied. The household stops running the supply chain itself.**
 
-## 2. Problem
+AllDone replaces repetitive grocery shopping with recurring household supply built around actual use, reusable containers, delivery, return, washing and recirculation.
 
-- recurring household supply is still time-intensive
-- current delivery models remain packaging-heavy
-- quantity mismatch creates waste and clutter
-- dense buildings still get handled through fragmented logistics instead of real supply infrastructure
+## 2. The work being removed
 
-## 3. Solution
+Every household repeatedly checks stock, remembers shortages, chooses quantities, travels, picks, carries, unloads, stores and handles packaging for the same ordinary goods.
 
-- recurring supply plans
-- glass-first reusable containers
-- scheduled delivery plus return pickup
-- centralized wash and recirculation
+Those tasks are familiar enough to disappear inside the phrase “going shopping,” but they are real procurement, inventory and transport work.
 
-## 4. Why Now
+## 3. The AllDone loop
 
-- consumers already accept app-mediated fulfillment
-- reusable packaging pressure is higher
-- lightweight operator software is easier to build and run
-- dense residential logistics make narrow pilots feasible
+Consumption informs the next quantity.
 
-## 5. Initial Wedge
+Goods are portioned and packed into reusable containers.
 
-- apartment-block or housing-cooperative pilot
-- 60 households
+A recurring route delivers filled containers and collects empties.
+
+Returned containers are inspected, washed, refilled and put back into circulation.
+
+## 4. Why now
+
+Delivery behaviour is already familiar.
+
+Route planning, scanning, billing and lightweight operations software are accessible.
+
+Dense residential environments create useful route concentration.
+
+Reusable packaging has become a practical cost and waste issue.
+
+Together, those conditions make a fuller recurring supply loop testable.
+
+## 5. First pilot
+
+- one apartment block, housing cooperative or similar dense cluster
+- about 60 active households
+- weekly service
 - 8-15 staple SKUs
-- weekly cadence
+- `Storage-M` and `Dose-M` reusable container formats
+- deposit-backed returns
+- centralized washing
 
-## 6. Product And System
+Small enough to control, dense enough to produce useful route and return data.
 
-- container system
-- return loop
-- wash model
-- operator workflow
+## 6. What the product includes
 
-## 7. Business Model
+The product is the operating loop: household plans, quantities, containers, packing, route execution, returns, washing, inspection, refill and billing.
 
-- merchandise margin
-- weekly service fee
-- refundable deposit-backed returns
-- shared-savings logic underneath the customer experience
+The software keeps the state of those parts connected.
 
-## 8. Value Creation And Capture
+## 7. Business model
 
-- household time and waste savings
-- packaging and waste-system reduction
-- transport compression at dense nodes
-- operator capture as a minority share of larger system savings
+Working revenue combines merchandise margin and a weekly service fee. A refundable deposit supports container returns.
 
-## 9. Proof Plan
+The economics improve if dense routing, repeated container use and predictable recurring demand remove more cost than the replacement loop adds.
 
-- return compliance
-- breakage and loss
-- wash stability
-- route efficiency
+## 8. What the pilot has to prove
+
 - household retention
+- return compliance
+- breakage and permanent loss
+- wash throughput and cost
+- route and stop efficiency
+- packing accuracy
+- actual basket margin
+- contribution before central overhead
 
-## 10. Team / Capability
+## 9. What already exists
 
-- system concept
-- packaging and operating model
-- backend prototype
-- public IPClaim record
+- documented system and pilot design
+- container and wash/return specifications
+- planning economics
+- working backend flows for households, packing, routes, returns, washing and billing
+- earlier consumption-learning logic
+- public authorship and timestamp records
+
+## 10. Current stage
+
+AllDone is public, documented, prototype-backed and pre-pilot.
+
+The next stage is supplier and physical validation, pilot-safe software, a real operating site, compliance clearance, recruited households and live measurements.
 
 ## 11. Raise
 
-- target pre-seed range
-- what the round funds
-- what proof the round should buy
+Current planning range: EUR 250,000-500,000.
+
+Main planning case: EUR 350,000 over roughly 12-18 months.
+
+The round is intended to buy one functioning pilot loop and the evidence needed to judge the next stage.
