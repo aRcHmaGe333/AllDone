@@ -1,42 +1,63 @@
 # Investor FAQ
 
-## Is AllDone just grocery delivery?
+## How is AllDone different from ordinary grocery delivery?
 
-No. The core system is packaging, return, washing, and recirculation, not just delivery.
+Ordinary grocery delivery usually keeps the supermarket order intact and changes how the bags reach the home.
 
-It should be compared to the full incumbent stack it replaces, not to the unit economics of a generic courier run.
+AllDone is built around recurring supply. It adds quantity adjustment, reusable containers, collection, washing, inspection, recirculation and software that follows the household and container state across the loop.
 
-## Why glass?
+The economic comparison is therefore the full grocery loop against the full AllDone loop.
 
-Glass is the default because it is inert, easy to inspect, and aligned with repeated washing and long reuse life. The repo also documents fallback cases where non-glass elements may be justified.
+## Why use glass?
 
-## What stage is the company at?
+The current pilot direction uses borosilicate glass bodies with stainless steel and silicone in the closure path.
 
-Publicly exposed, funding-ready in narrative structure, and prototype-backed.
+The reasons are chemical inertness, easy inspection, low odor absorption and compatibility with repeated washing. Glass also adds weight and breakage risk, so the pilot has to validate the choice against real route, handling and wash data.
 
-Not yet pilot-proven.
+Tempered or standard soda-lime glass remains the practical fallback where sourcing, cost or early physical testing makes that sensible.
 
-## What still needs proof?
+## What stage is AllDone at?
 
-- live return behavior
-- wash cost
-- breakage rate
-- route efficiency
-- repeat household usage
+AllDone is public, documented, prototype-backed and pre-pilot.
 
-## What does the software already do?
+The repo is mature enough for serious early funding conversations about the next proof stage. Live pilot economics, customer retention, route performance, breakage and wash costs still have to be measured.
 
-The repo now contains both:
+## What already exists in software?
 
-- demand-learning prototype logic
-- operator-facing workflow scaffolding for households, subscriptions, pack plans, routes, returns, wash batches, and billing events
+The Node.js/Express prototype has two main areas:
+
+- an operations flow for households, subscriptions, pack plans, routes, container returns, wash batches and billing events
+- earlier consumption-learning and quantity-adjustment logic
+
+Prototype state is persisted locally in JSON files under `data/runtime/`.
+
+Before live pilot use, the persistence layer, operator interfaces and payment/deposit handling need to be hardened.
+
+## What does the first pilot look like?
+
+The current working model is one dense residential cluster with about 60 active households, weekly replenishment, 8-15 staple SKUs, two reusable container formats, deposit-backed returns and centralized washing.
+
+## What are the main proof points?
+
+- household retention
+- return compliance
+- breakage and loss
+- wash cost and throughput
+- route and stop efficiency
+- packing accuracy
+- actual basket margin
+- contribution before central overhead
+
+Current planning targets include at least 97% return compliance within the agreed window and combined breakage plus non-return below 1% of container turns.
 
 ## What would the first raise fund?
 
-The first raise should fund proof of the loop, not premature scaling.
+The current planning range is EUR 250,000-500,000, with EUR 350,000 used as the main 12-18 month case.
 
-## Why not compare AllDone to ordinary delivery apps?
+The money would fund the first real container fleet, wash-and-return operations, software hardening, operator interfaces, compliance work, pilot labour and enough runway to collect meaningful operating data.
 
-Because that is the wrong benchmark.
+## What could become difficult to copy?
 
-AllDone is a replacement model for a recurring household supply system with reusable packaging, returns, wash, and recirculation. The right economic comparison is the full incumbent stack versus the full replacement stack.
+The current advantage is the integrated system design.
+
+A live loop can add operating knowledge about container lifespan, wash cost, return behaviour, packing exceptions, route density, building access, household changes and software shaped by real failures. That accumulated operating knowledge is more defensible than the customer-facing interface alone.
