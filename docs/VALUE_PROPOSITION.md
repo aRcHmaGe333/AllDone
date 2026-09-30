@@ -2,43 +2,45 @@
 
 Status: active
 
-AllDone gives people back the part of their week that disappears into keeping a home supplied.
+AllDone removes a recurring obligation that has become so normal it barely looks like work.
 
-The visible chore is shopping. Around it sits a quieter supply chain: checking stock, remembering shortages, estimating quantities, travelling, picking, carrying, unloading, storing, correcting mistakes and disposing of what the trip leaves behind.
+The visible chore is shopping. Around it sits a miniature unpaid supply chain: checking stock, predicting shortages, remembering, comparing, choosing quantities, travelling, picking, inspecting, paying, carrying, unloading, storing and disposing of what the trip leaves behind.
 
-AllDone moves recurring replenishment into a managed loop. The household chooses what it wants; the service keeps track of the recurring requirement, prepares the next useful quantity, delivers it and takes the empty reusable containers back for washing and reuse.
+The work does not stay politely inside the supermarket trip. It leaks into the week as open loops: something is nearly gone, something else was forgotten, the next trip has to fit somewhere, a shortage changes tonight's plan.
+
+AllDone moves that overhead into a managed supply loop. The household chooses what it wants; the system remembers the recurring requirement, prepares the next useful quantity, delivers it and takes the empty reusable containers back for washing and reuse. The intended change is simple: the home feels supplied instead of always slightly close to running out of something.
 
 **We source it, portion it, pack it, bring it, collect it, wash it and reuse it. You use it.**
 
 ## Time and attention
 
-Routine grocery shopping consumes travel time, store time, queueing time and carrying time.
+Routine grocery shopping consumes travel time, store time, queueing time and carrying time. More quietly, it consumes memory.
 
-It also creates interruptions. Something runs out. The next trip has to be remembered. One forgotten item can create another trip.
+Something runs out. The next trip has to be remembered. A cupboard gets checked. A half-list stays in somebody's head. One forgotten item can create another trip.
 
-Consumption history gives the service a record of what is actually being used. The household no longer has to repeatedly rediscover the same basic requirements.
+AllDone is meant to stop wasting human memory on stock control for ordinary life. Consumption history gives the service a record of what is actually being used so the same basic requirements do not have to be rediscovered every few days.
 
 ## Physical effort
 
-The grocery system often makes the customer its final freight handler.
+The supermarket supply chain has a crude final assumption: whatever the customer buys, the customer's body will somehow carry it home.
 
-People carry concentrated loads through parking lots, streets, transit, lifts and stairs because the supply chain stops short of the home.
+Food reaches the shop through warehouses, trucks, pallets and trolleys. Then the last stretch is assigned to arms, bags, backpacks, stairs, buses and whoever happened to be available that day. Even remembering the better carrying equipment becomes another task.
 
-AllDone completes that physical job as part of the recurring service.
+AllDone completes that physical job as part of the supply system. The body stops being the fallback freight vehicle.
 
 ## Quantity and food waste
 
 Retail pack sizes are built for shelves. Household consumption has its own rhythm.
 
-A recurring service can use actual consumption to adjust the next quantity. Better quantity and timing can reduce overbuying, stale stock, spoilage, duplicate purchases and shortages.
+A recurring service can use actual consumption to adjust the next quantity. For the goods the loop can predict and portion reliably, the aim is to eliminate routine overbuying rather than merely make the excess smaller. Better timing also attacks stale stock, spoilage, duplicate purchases and shortages.
 
 The current software includes early consumption-profile and quantity-adjustment logic. The first pilot will test how much value this creates in practice.
 
 ## Packaging
 
-Reusable containers turn packaging from a one-use material into circulating equipment.
+Reusable containers turn packaging from purchased rubbish into circulating equipment.
 
-For households, that means less disposable packaging entering the home and less rubbish leaving it. For the operator, container lifespan, return behaviour, wash cost, gasket replacement, breakage and loss become measurable operating variables.
+For households, the covered loop stops sending a new stream of plastic and cardboard into the home just so it can become waste. For the operator, the same packaging becomes durable equipment whose lifespan, return behaviour, wash cost, gasket replacement, breakage and loss can be measured and improved.
 
 The pilot uses a glass-first material direction with stainless steel and silicone in the closure path. Physical testing will determine whether that choice survives real handling and wash economics.
 
@@ -81,4 +83,4 @@ The first pilot exists to measure those conditions rather than assume them.
 
 ## Current public promise
 
-**AllDone keeps the home supplied with recurring goods while taking over much of the shopping, carrying, packaging and replenishment work households currently repeat by hand.**
+**AllDone keeps the home supplied by taking the repetitive shopping, remembering, carrying, packaging and stock-control work out of the household and putting it into one recurring system.**
