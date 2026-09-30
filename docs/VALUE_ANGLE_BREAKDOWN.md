@@ -4,46 +4,35 @@ Status: active
 
 Purpose
 -------
-This document expands the skim-level value statements from [README.md](../README.md) into the actual pitch surface they need.
+The supermarket trip is easy to see. The machinery surrounding it is not.
 
-It exists because AllDone creates value in many places at once, and short bullet lists can make that value look smaller, flatter, and more generic than it really is.
+A household checks stock, predicts shortages, compares options, chooses quantities, makes lists, travels, picks, inspects, pays, packs, carries, receives, stores and eventually disposes of packaging and leftovers. In professional language those are separate jobs. In ordinary life they are compressed into “going shopping.”
+
+**The absurdity is making every household run a miniature supply chain by hand.**
+
+AllDone is designed to remove that repeated operation from ordinary life, not merely speed up one purchase.
 
 ## Consumer Time
 
-AllDone is designed to remove a repeating life chore, not merely speed up one purchase.
-
 ### Repeated Supermarket Runs
 
-This is not just about travel time.
+Travel time is only the part that is easy to put on a clock.
 
-It is about the constant interruption pattern of:
+The rest arrives as interruption: realizing something is low, remembering it later, postponing the trip, rebuilding the list, discovering the shortage at the wrong moment, fitting another low-value errand into a day that was already full.
 
-- realizing something ran out
-- breaking whatever you were doing
-- going out for a low-value errand
-- repeating that cycle again a few days later
-
-AllDone tries to turn that repeating disruption into a background system instead of a recurring task.
+AllDone turns that drip-feed into a background supply system. The point is not merely fewer minutes inside a supermarket. It is fewer open loops competing for attention.
 
 ### Carrying Heavy Bags
 
-People are still using their own bodies as the last ugly link in a badly designed logistics chain.
+Food can move through ports, warehouses, trucks, pallets and trolleys, then the system stops and assumes the customer will somehow carry the freight home.
 
-That means:
+That endpoint has been normalized so completely that it barely registers as a design failure. People improvise with paper bags, plastic bags, totes, backpacks, one-sided loads and whatever they remembered that day. The weight, stairs, distance and fatigue remain.
 
-- carrying weight that should have been handled by the system
-- dragging bags through rain, stairs, elevators, and parking lots
-- spending physical effort on something that adds no real value to life
-
-AllDone matters here because the point is not "slightly easier carrying."
-
-The point is that routine household supply should flow to the home instead of being manually hauled like a medieval burden.
+AllDone matters here because the aim is not slightly easier carrying. Routine household supply should reach the home as part of the logistics system. The customer's body should not be its fallback transport.
 
 ### Remembering The Same Staples Over And Over
 
-A large part of shopping is not choice.
-
-It is memory maintenance.
+A large part of shopping is memory maintenance disguised as consumer choice.
 
 People keep spending attention on the same recurring inventory:
 
@@ -54,7 +43,7 @@ People keep spending attention on the same recurring inventory:
 - paper goods
 - all the other basics that are boring but necessary
 
-AllDone tries to remove that repetitive remembering from the human brain and place it into the loop itself.
+AllDone moves that repetitive stock control out of human memory and into the loop itself.
 
 ### Checking What Ran Out
 
@@ -68,11 +57,7 @@ AllDone creates value by reducing that background inventory anxiety and replacin
 
 ### Wasting Attention On Low-Value Replenishment
 
-This may be the deepest time gain of all.
-
-The damage is not only in the minutes spent buying something.
-
-The damage is in the mental leakage:
+This may be the deepest time gain of all. The damage is not only in the minutes spent buying something; it is in the mental leakage:
 
 - remembering
 - postponing
@@ -83,14 +68,9 @@ The damage is in the mental leakage:
 
 AllDone matters if it can remove those loops and return that attention to higher-value parts of life.
 
-What the household gets back:
+What the household gets back is time, attention, physical effort and a calmer baseline. The home can feel supplied instead of always slightly close to running out of something.
 
-- time
-- attention
-- physical effort
-- a calmer baseline
-
-This matters because routine household supply is not just a spending problem. It is also a life-fragmentation problem.
+Routine household supply is therefore not only a spending problem. It is a life-fragmentation problem.
 
 ## Packaging Removal
 
@@ -114,14 +94,7 @@ This means the household does not keep paying for packaging that is used once an
 
 It also means the operator is not structurally dependent on disposable packaging throughput.
 
-The real gain is not just "less trash."
-
-It is:
-
-- less money wasted on one-use material
-- less visible mess in the home
-- less waste-bin pressure
-- less normalization of buying garbage attached to goods
+The gain is larger than “less trash”: less money spent on one-use material, less visible mess, less pressure on bins, and less normalization of buying garbage attached to the things we actually wanted.
 
 ## Transport Compression
 
