@@ -33,13 +33,28 @@ class JsonFileStore {
     const payload = JSON.stringify(value, null, 2);
     const temporaryPath = `${this.filePath}.${process.pid}.${Date.now()}.tmp`;
 
-    fs.writeFileSync(temporaryPath, payload, 'utf8');
+    const fileDescriptor = fs.openSync(temporaryPath, 'w');
+    try {
+      fs.writeFileSync(fileDescriptor, payload, 'utf8');
+      fs.fsyncSync(fileDescriptor);
+    } finally {
+      fs.closeSync(fileDescriptor);
+    }
 
     if (fs.existsSync(this.filePath)) {
       fs.copyFileSync(this.filePath, this.backupPath);
     }
 
-    fs.renameSync(temporaryPath, this.filePath);
+    try {
+      fs.renameSync(temporaryPath, this.filePath);
+    } catch (error) {
+      if ((error.code === 'EEXIST' || error.code === 'EPERM') && fs.existsSync(this.filePath)) {
+        fs.unlinkSync(this.filePath);
+        fs.renameSync(temporaryPath, this.filePath);
+      } else {
+        throw error;
+      }
+    }
   }
 
   readJson(filePath, defaultValue) {
