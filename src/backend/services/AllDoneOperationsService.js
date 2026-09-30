@@ -246,16 +246,22 @@ class AllDoneOperationsService {
     stop.returnedContainerIds = data.returnedContainerIds || [];
     stop.notes = data.notes || '';
 
-    stop.items.forEach(item => {
-      const container = this.getContainer(item.containerId);
-      if (container) {
+    const delivered = stop.status === 'completed' || stop.status === 'delivered';
+    if (delivered) {
+      stop.items.forEach(item => {
+        const container = this.getContainer(item.containerId);
+        if (!container) return;
+        if (container.currentState !== 'assigned') {
+          throw new Error(`Container ${container.containerId} must be assigned before delivery`);
+        }
+
         container.currentState = 'with_household';
         container.currentLocation = 'household';
         container.householdId = stop.householdId;
         container.deliveredAt = new Date();
         container.updatedAt = new Date();
-      }
-    });
+      });
+    }
 
     if (stop.returnedContainerIds.length > 0) {
       this.processReturnedContainers({
@@ -307,6 +313,12 @@ class AllDoneOperationsService {
 
     const container = this.getContainer(containerId);
     if (!container) throw new Error(`Container ${containerId} not found`);
+    if (container.currentState !== 'with_household') {
+      throw new Error(`Container ${containerId} cannot be returned from state ${container.currentState}`);
+    }
+    if (data.householdId && container.householdId && data.householdId !== container.householdId) {
+      throw new Error(`Container ${containerId} is assigned to household ${container.householdId}, not ${data.householdId}`);
+    }
 
     const previousHouseholdId = container.householdId || data.householdId || null;
     const returnedAt = new Date();
