@@ -1,10 +1,14 @@
 # AllDone
 
-**AllDone removes grocery shopping by making food supply continuous.**
+**AllDone removes the need for daily shopping, freeing us from the pain of carrying groceries, shopping lists and shopping trips, shortages, stress and overly tight schedules. It eliminates overbuying and food waste, replaces plastic packaging and its phthalate contamination with reusable glass. It delivers fresh food when we need it and quite literally gives 1.4% of our lives back to us (technically less, but arguably even more*). It also removes cardboard, plastic and organic matter from the landfills (100% of the quantity that was present in this process).**
 
-Every household still runs a small supply chain by hand. Someone checks what is left, notices what is running out, decides how much to buy, makes a list, travels to the store, picks and inspects the goods, pays, carries them home, stores them, deals with the packaging and starts watching the cupboards again.
+The absurdity is making every household run its own miniature supply chain by hand. Someone checks stock, predicts shortages, remembers what was forgotten, compares options, chooses quantities, travels, picks, inspects, pays, packs, carries, unloads, stores and starts watching the cupboards again.
 
-AllDone is designed to take that repeated work away from the household.
+We built industrial supply chains across countries and warehouses, then left the customer to finish the last jobs manually. AllDone takes those jobs back into the supply system.
+
+*The 1.4% figure corresponds to roughly 2.3 hours a week spent grocery shopping and travelling to and from the store: 2.3 hours out of 168 is 1.37%. Across an entire lifespan it is technically lower because very young children do not run their own grocery supply; the estimate can also miss planning, stock checking, list-making, unloading, emergency trips and the interruptions around them. A 2007 analysis using American Time Use Survey data estimated about 2.3 hours per week for shopping plus associated travel.*
+
+**Materials note:** phthalates are used in some food-contact plastics and components, not every plastic package. The glass-first AllDone loop removes that food-contact pathway wherever those materials would otherwise be used.
 
 ## The home stays supplied
 
@@ -18,15 +22,17 @@ The basic loop is:
 
 `use -> measure -> decide the next quantity -> pack -> deliver -> collect -> wash -> inspect -> refill -> deliver again`
 
-The household should experience very little of that machinery. The useful result is simple: the things it routinely uses are there when they are needed.
+The household should experience very little of that machinery. The useful result is that the home feels supplied instead of always slightly close to running out of something.
 
 ## Grocery shopping is more work than the trip to the shop
 
 The supermarket visit is only the visible part of the job. Around it sits the rest: checking stock, remembering shortages, estimating quantities, rebuilding lists, fitting the trip into the day, travelling, queueing, carrying, unpacking, storing, correcting forgotten items and eventually doing it all again.
 
-The work often arrives in fragments. Milk is low. Soap is nearly gone. Someone remembers pasta while doing something else. A cupboard gets checked. A list starts. A trip is postponed. Something runs out first.
+The work arrives as a drip-feed. Milk is low. Soap is nearly gone. Someone remembers pasta while doing something else. A cupboard gets checked. A list starts. A trip is postponed. Something runs out first. Then the same open loop appears in your head again.
 
-AllDone moves recurring replenishment into a service that can remember those needs instead of asking the household to rediscover them every few days.
+That is part of the cost. Household memory is being used as stock-control infrastructure for ordinary life.
+
+AllDone moves that overhead out of the person's day and into the system. Recurring replenishment can be remembered by the service instead of repeatedly rediscovered by the household.
 
 The household keeps control of what it wants and can change, skip, pause or stop the recurring supply. AllDone handles the repeated logistics around those choices.
 
@@ -39,6 +45,14 @@ A household that consistently uses less can receive less next time. One that use
 That can reduce overbuying, stale stock, spoilage, duplicate purchases and emergency runs caused by shortages.
 
 The repo already contains early consumption-profile logic that records served and consumed quantities, tracks waste, estimates future demand and can suggest portion changes. For the first pilot, reliable delivery, return and washing matter more than sophisticated prediction. Better prediction can improve the loop once the loop works.
+
+## The body should not be the last freight vehicle
+
+Food can cross continents by ship, truck, pallet and trolley, then the logistics system can stop a few hundred metres from the destination and hand the freight to a human body.
+
+That is an astonishingly primitive endpoint for a modern supply chain. Bags still have to cross parking lots, streets, buses, trains, lifts and stairs. Remembering a backpack, trolley or reusable bags becomes yet another planning task; when that fails, the body becomes the fallback transport system.
+
+AllDone finishes the journey itself. Carrying routine household supply home is removed with the shopping trip rather than made slightly easier.
 
 ## Reusable containers replace disposable packaging
 
