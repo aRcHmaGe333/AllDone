@@ -1,10 +1,10 @@
 # AllDone One-Page Summary
 
-**AllDone removes grocery shopping by making household supply continuous.**
+**AllDone removes the need for daily shopping by turning recurring household supply into one managed loop.**
 
-Routine grocery shopping is a supply job carried out separately by every household. Someone checks stock, predicts shortages, chooses quantities, travels, picks, carries, unloads, stores and deals with the packaging and waste.
+Every household currently runs a small unpaid procurement, inventory and freight operation of its own: checking stock, predicting shortages, remembering lists, choosing quantities, travelling, picking, carrying, unloading, storing and disposing of the packaging and waste.
 
-AllDone moves that repetition into one managed loop.
+The visible supermarket trip is only part of the cost. The rest is the drip-feed of small obligations around it. AllDone moves that repetition into the supply system so the home can simply stay supplied.
 
 Recurring goods arrive according to household demand and use. Suitable goods travel in reusable containers. Empty containers are collected on the recurring route, washed, inspected, refilled and returned to circulation. The household keeps control of what it wants while much of the remembering, carrying, packaging disposal and quantity guesswork moves into the service.
 
@@ -12,12 +12,12 @@ Recurring goods arrive according to household demand and use. Suitable goods tra
 
 The value is spread across several parts of the present grocery loop:
 
-- household time and attention
-- personal transport and carrying
-- food mismatch and spoilage
-- disposable packaging
-- fragmented delivery and waste handling
-- limited visibility of recurring demand
+- time and attention recovered from repeated shopping and stock control
+- personal transport and carrying removed from the covered supply loop
+- overbuying, mismatch and spoilage attacked through quantities that follow use
+- disposable packaging replaced by circulating containers
+- fragmented delivery and waste handling compressed into a two-way route
+- recurring demand made visible earlier
 
 The economic comparison is the full grocery loop against the full AllDone loop.
 
